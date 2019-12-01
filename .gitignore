@@ -1,13 +1,6 @@
-'#' Lines starting with '#' are considered comments.
-
-'#' Ignore any file named sh.exe.stackdump
 
 sh.exe.stackdump
 
+/node_modules
 
-
-'#' Ignore objects and archives.
-
-*.db
-
-.node_modules/
+.db

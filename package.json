@@ -1,0 +1,22 @@
+{
+  "name": "technomart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BolotovAlexander/Tecnomarket.git"
+  },
+  "author": "BolotovAlexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BolotovAlexander/Tecnomarket/issues"
+  },
+  "homepage": "https://github.com/BolotovAlexander/Tecnomarket#readme",
+  "dependencies": {
+    "less": "^3.10.3"
+  },
+}

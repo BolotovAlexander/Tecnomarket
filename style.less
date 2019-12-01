@@ -1,74 +1,244 @@
-@color-darkBlueGray: #293449;
 @color-lightBlueGray: #32425c;
+@color-darkBlueGray: (@color-lightBlueGray - #090e13);
+@color-deepDarkBlueGray:(@color-lightBlueGray - #111822);
 @color-lightRed: #ee3643;
-@color-darkRed: #b52933;
+@color-darkRed: (@color-lightRed - #390d10);
+@color-greenButton: #5fbb2d;
 @color-textYello: #ffd180;
 @color-textWhite: #ffff;
 @color-backgroundBeige: #f9f5f0;
 
-html, body {
-    margin: 0;
-    padding: 0;
+@color-headerBackgroundLightBlue: #f3f7f9;
+
+@color-mainBackgroundWhite: #ffffff;
+
+@color-serviceBackgroundLightBlue: #f4f8f9;
+
+@color-navSectionBackgroundDarkYellow: #ffbf47;
+@color-navSectionBackgroundYellow: #ffc047;
+@color-navSectionBackgroundBlue: #3bbce3;
+@color-navSectionBackgroundViolet: #dc91d8;
+@color-navSectionBackgroundGreen: #8ed78f;
+
+@color-itemCardBorder: #eaeaea;
+
+@padding-leftRight: 0px 130px;
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    list-style-type: none
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
 }
 
-a { 
-   text-decoration: none;
-   color: black;
-} 
+li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  color: @color-lightRed;
+}
 
 .visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
-.header {
-    background-color: @color-lightBlueGray;
-    position: relative;
-    color: black;
+
+header {
+  display: flex; 
+  flex-direction: column;
+  background-color: @color-headerBackgroundLightBlue;
+  position: relative;
+  color: @color-textWhite;
 }
 
-.headerBackground {
-    background-color: #f3f7f8;
+.header-up {
+  background-color: @color-darkBlueGray;
+  padding: @padding-leftRight;
 }
 
-.headerNav {
-    background-color: @color-lightBlueGray;
-}
-.footerLight {
-    background-color: @color-lightBlueGray;
-}
-.footerDark {
-    background-color: @color-darkBlueGray;
+.technomart-link {
+  background-color: @color-lightRed;
+  width: 220px;
+  position: relative;
 }
 
+.technomart-link::after {
+  background-color: @color-darkRed;
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+}
+
+.input-search {
+  background-color: inherit;
+  outline: none;
+  border: none
+}
+
+.button-create-order {
+  background-color: @color-greenButton;
+  color: @color-textWhite;
+}
+
+.header-down {
+  padding: @padding-leftRight;
+  padding-bottom: 60px;
+}
+
+.wrapper-header-tel {
+  border: 3px solid @color-textWhite;
+  color: @color-lightRed;
+}
+
+.input-tel {
+  color: inherit;
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+.header-nav {
+  position: relative;
+  background-color: @color-lightBlueGray;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-nav::after {
+  background-color: @color-darkBlueGray;
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+}
+
+
+main {
+  background-color: @color-mainBackgroundWhite;
+}
+
+.wrapper-nav-goods-and-service {
+  padding: @padding-leftRight;
+}
 
 .slider {
-    width: 620px;
-    height: 266px;
-    background-image: url('./img/slider/slider_perforator.jpg');
-    background-color: #adabaa;
+  width: 620px;
+  height: 266px;
+  background-image: url('./img/slider/slider_perforator.jpg');
+  background-color: #adabaa;
+}
+
+.button-right,
+.button-left,
+.pop-up-map {
+  border: medium none;
+  background: transparent;
+  background-color: transparent;
+}
+
+.button-materials {
+  background-color: @color-navSectionBackgroundDarkYellow;
+}
+
+.button-instuments {
+  background-color: @color-navSectionBackgroundBlue;
+}
+
+.button-technics {
+  background-color: @color-navSectionBackgroundViolet;
+}
+
+.button-discounts {
+  background-color: @color-navSectionBackgroundGreen;
+}
+
+.button-delivery {
+  background-color: @color-navSectionBackgroundYellow;
+}
+
+.wrapper-popular-goods {
+  padding: @padding-leftRight;
+}
+
+.popular-goods,
+.popular-brands {
+  background-color: @color-backgroundBeige;
+}
+
+.wrapper-popular-brands {
+  padding: @padding-leftRight;
+}
+
+.card-item,
+.brand {
+  border: 1px solid @color-itemCardBorder;
+}
+.service {
+  background-color: @color-serviceBackgroundLightBlue;
+  padding: @padding-leftRight;
+}
+
+.company-contacts {
+  padding: @padding-leftRight;
+}
+
+
+footer {
+  background-color: @color-lightBlueGray;
+  color: @color-textWhite;
+}
+
+.footer-up {
+  padding: @padding-leftRight;
+}
+
+.footer-down {
+  background-color: @color-darkBlueGray;
+  padding: @padding-leftRight;
+}
+
+.social-network {
+  background-color: @color-deepDarkBlueGray;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 
 
 
 
-
-
-.test{
-    width: 830px;
-    height: 322px;
-    background-color: #ffbf47;
-    
+.test {
+  width: 830px;
+  height: 322px;
+  // background-color: #ffbf47;
+  color: white
 }
 
-.test img:hover{
-    filter: hue-rotate(66deg) brightness(0.3);
+.test img:hover {
+  filter: hue-rotate(66deg) brightness(0.3);
 }
