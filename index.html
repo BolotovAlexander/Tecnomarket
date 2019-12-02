@@ -15,25 +15,26 @@
   <body>
 
     <header>
-      <ul class="header-up">
-        <li class="technomart-link"><a href="#">Техномарт</a></li>
-        <li class="header-search">
-          <img src="./img/icon/icon_search.png" alt="лупа">
-          <input class="input-search" value="Поиск:">
-        </li>
-        <li>
-          <img src="./img/icon/icon_bookmark.png" alt="закладка">
-          Закладки:
-        </li>
-        <li>
-          <img src="./img/icon/icon_cart.png" alt="корзина">
-          Корзина:
-        </li>
-        <li class="button-create-order">
-          <a href="#">Оформить заказ</a>
-        </li>
-      </ul>
-
+      <div class="wrapper-header-up">
+        <ul class="header-up">
+          <li class="technomart-link"><a href="index.html">Техномарт</a></li>
+          <li class="header-search">
+            <img src="./img/icon/icon_search.png" alt="лупа">
+            <input class="input-search" value="Поиск:">
+          </li>
+          <li>
+            <img src="./img/icon/icon_bookmark.png" alt="закладка">
+            Закладки:
+          </li>
+          <li>
+            <img src="./img/icon/icon_cart.png" alt="корзина">
+            Корзина:
+          </li>
+          <li class="button-create-order">
+            <a href="#">Оформить заказ</a>
+          </li>
+        </ul>
+      </div>
       <div class="header-down">
         <h1>
           <p>
@@ -74,7 +75,7 @@
     <main>
       <section class="wrapper-nav-goods-and-service">
         <h2 class="visually-hidden">Навигация по товарам и услугам</h2>
-        <div>
+        <div class="wrapper-button-goods-and-service-up">
           <div class="button-materials">
             <h3>Материалы</h3>
             <button>НА ЛЮБОЙ ВКУС</button>
@@ -93,11 +94,11 @@
           </div>
         </div>
 
-        <div>
+        <div  class="wrapper-button-goods-and-service-down">
           <div class="slider">
             <p><span>ПЕРФОРАТОРЫ</span></p>
             настоящие мужские игрушки
-            <a href="#">ОТКРЫТЬ КАТАЛОГ</a>
+            <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
             <button class="button-left"><img src="./img/icon/icon_left.png" alt="стрелка влево"></button>
             <button class="button-right"><img src="./img/icon/icon_right.png" alt="стрелка вправо"></button>
             <div class="slider-radio">
@@ -105,15 +106,17 @@
               <div class="slider-right-radio"></div>
             </div>
           </div>
-          <div class="button-discounts">
-            <h3>Скидки 50%</h3>
-            <button>НА 350 ТОВАРОВ</button>
-            <img src="./img/logo/logo_discounts.png" alt="корзина">
-          </div>
-          <div class="button-delivery">
-            <h3>Доставка</h3>
-            <button>БЕСПЛАТНО</button>
-            <img src="./img/logo/logo_delivery.png" alt="фургон">
+          <div class="wrapper-button-goods-and-service-right">
+            <div class="button-discounts">
+              <h3>Скидки 50%</h3>
+              <button>НА 350 ТОВАРОВ</button>
+              <img src="./img/logo/logo_discounts.png" alt="корзина">
+            </div>
+            <div class="button-delivery">
+              <h3>Доставка</h3>
+              <button>БЕСПЛАТНО</button>
+              <img src="./img/logo/logo_delivery.png" alt="фургон">
+            </div>
           </div>
         </div>
       </section>
@@ -123,7 +126,7 @@
           <h2>Популярные товары</h2>
           <a href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
         </div>
-        <ul>
+        <ul class="card">
           <li class="card-item">
             <img src="./img/goods/goods_Bosch BFG 9000.jpg" alt="Bosch">
             <h3>Перфоратор Bosch BFG 9000</h3>
@@ -157,7 +160,7 @@
           <h2>Популярные производители</h2>
           <a href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
         </div>
-        <ul>
+        <ul class="card">
           <li class="brand">
             <h3 class="visually-hidden">Bosch</h3>
             <img src="./img/brands/brands_Bosch.png" alt="Bosch">
@@ -174,6 +177,8 @@
             <h3 class="visually-hidden">Интерскол</h3>
             <img src="./img/brands/brands_Interscol.png" alt="Интерскол">
           </li>
+        </ul>
+        <ul class="card">
           <li class="brand">
             <h3 class="visually-hidden">Hitachi</h3>
             <img src="./img/brands/brands_Hitachi.png" alt="Hitachi">
@@ -195,11 +200,47 @@
 
       <section class="service">
         <h2 class="visually-hidden">Сервисы и доставка</h2>
-        <section>
-          <h3>Сервисы</h3>
+        <section class="service-up">
+          <span>СЕРВИСЫ</span>
+          <p>
+            Хороший интернет-магазин отличается от плохого не только ценами!</br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
         </section>
-        <section>
-          <h3>Доставка</h3>
+        <section class="service-down">
+            <h3 class="visually-hidden">Сервисы</h3>
+            <ul class="buttons-service">
+              <li><button class="button-delivery">Доставка</button></li>
+              <li><button class="button-guarantee">Гарантия</button></li>
+              <li><button class="button-credit">Кредит</button></li>
+            </ul>
+            <img src="./img/background/background_separator.png"> 
+            <div class="service-delivery">
+                <h3>ДОСТАВКА</h3>
+                <p>
+                  Мы с удовольствием доставим ваш товар прямо</br>
+                  к вашему подъезду совершенно бесплатно!</br>
+                  Ведь мы неплохо заработаем,</br>
+                  поднимая его на ваш этаж!
+                </p>
+            </div>
+            <div class="service-guarantee">
+                <h3>ГАРАНТИЯ</h3>
+                <p>
+                  Если купленный у нас товар поломается или заискрит,</br>
+                  а также в случае пожара, спровоцированного его возгоранием,</br>
+                  вы всегда можете быть уверенны в нашей гарантии. Мы обменяем</br>
+                  сгоревший товар на новый.</br>
+                  Дом уж восстановите как-нибудь сами.
+                </p>
+            </div>
+            <div class="service-credit">
+                <h3>КРЕДИТ</h3>
+                <p>
+                  Залезть в долговую яму стало проще!</br>
+                  Кредитные консультанты придут к вам на помощь.
+                </p>
+            </div>
         </section>
       </section>
 
@@ -252,35 +293,40 @@
           </ul>
         </nav>
       </div>
-
-      <div class="footer-down">
-        <p>&copy 2010-2017 Компания &laquoТехномарт&raquo</br>
-          Все права защищены</p>
-        <nav>
-          <ul>
-            <li class="social-network">
-              <a href="#vkontakte" style="color: white">
-                <img src="./img/icon/icon_vk.png" alt="VK">
-              </a>
-            </li>
-            <li class="social-network">
-              <a href="#facebook" style="color: white">
-                <img src="./img/icon/icon_fb.png" alt="f">
-              </a>
-            </li>
-            <li class="social-network">
-              <a href="#instagram" style="color: white">
-                <img src="./img/icon/icon_insta.png" alt="Inst">
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>Обратная связь:</li>
-            <li><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-            <li>Разработано -</li>
-            <li><a href="htmlacademy.ru">htmlacademy.ru</a></li>
-          </ul>
-        </nav>
+      <div class="wrapper-footer-down">
+        <div class="footer-down">
+          <p>&copy 2010-2017 Компания &laquoТехномарт&raquo</br>
+            Все права защищены</p>
+          <nav>
+            <ul>
+              <li class="social-network">
+                <a href="#vkontakte" style="color: white">
+                  <img src="./img/icon/icon_vk.png" alt="VK">
+                </a>
+              </li>
+              <li class="social-network">
+                <a href="#facebook" style="color: white">
+                  <img src="./img/icon/icon_fb.png" alt="f">
+                </a>
+              </li>
+              <li class="social-network">
+                <a href="#instagram" style="color: white">
+                  <img src="./img/icon/icon_insta.png" alt="Inst">
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>Обратная связь:</li>
+              <li><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+              <li>Разработано -</li>
+              <li><a href="htmlacademy.ru">htmlacademy.ru</a></li>
+            </ul>
+          </nav>
+        
+        
+        
+        
+        </div>
       </div>
     </footer>
 
