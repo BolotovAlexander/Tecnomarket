@@ -1,7 +1,7 @@
-@color-lightBlueGray: #32425c;
+@color-lightBlueGray: #32425c;/*hsl(276, 75%, 21%);*/
 @color-darkBlueGray: (@color-lightBlueGray - #090e13);
 @color-deepDarkBlueGray:(@color-lightBlueGray - #111822);
-@color-lightRed: #ee3643;
+@color-lightRed: #ee3643; /*blue;*/
 @color-darkRed: (@color-lightRed - #390d10);
 @color-greenButton: #5fbb2d;
 @color-textYello: #ffd180;
@@ -23,7 +23,7 @@
 @color-itemCardBorder: #eaeaea;
 
 .variable-width-basic() {
-  width: 940px;
+  min-width: 940px;
   margin: 0 auto;
 }
 
@@ -63,7 +63,8 @@
 }
 
 .variable-width-goodsService() {
-  width: 300px;            
+  /*min-width: 300px;*/
+  flex-grow: 1;            
 } 
 
 html,
@@ -73,8 +74,8 @@ body {
 }
 
 body {
-  width: 1200px;
-  height: 3151px;
+ .variable-style-flex-column-space-between;
+  /*margin: auto;*/
 }
 
 ul {
@@ -101,39 +102,48 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  color: @color-lightBlueGray;
+  font: 30px cuprum;
+}
+
 .visually-hidden {
   .variable-visually-hidden;
 }
 
 
 header {
-  display: flex; 
-  flex-direction: column;
-  justify-content: start;
+  .variable-width-basic;
+  .variable-style-flex-column-space-between;
   background-color: @color-headerBackgroundLightBlue;
   position: relative;
   color: @color-textWhite;
-  height: 320px;
+  height: 256px;
+  margin: 0;
+  padding-bottom: 64px;
 }
 
 .wrapper-header-up {
   background-color: @color-darkBlueGray;
+  margin: 0;
 }
 
 .header-up {
- .variable-width-basic;
- /*display: flex; 
+ /*.variable-width-basic;*/
+ min-width: 940px;
+ display: flex; 
  flex-direction: row;
- justify-content: space-between;*/
- height: 42px;
+ justify-content: center;
  font: 17px cuprum;
 }
 
 .technomart-link {
   background-color: @color-lightRed;
-  width: 220px;
+  /*width: 220px;*/
   position: relative;
   padding-top: 3px;
+  padding-left: 55px;
+  padding-right: 56px;
   font: 24px cuprum;
 }
 
@@ -150,12 +160,14 @@ header {
 
 .header-search {
   .variable-style-flex-row-start;
-  width: 287px;
-  margin-left: auto;
+ /* width: 287px;*/
+  /*margin-left: auto;*/
+  padding-left: 17px;
+  padding-right: 86px;
 }
 
 .header-search-img {
-  margin: 0 10px 0 16px;
+  padding-right: 14px;
 }
 
 .input-search {
@@ -167,7 +179,8 @@ header {
 
 .header-bookmark {
   .variable-style-flex-row-start;
-  width: 150px;
+ /* width: 150px;*/
+  padding-right: 46px;
 }
 
 .header-bookmark-img {
@@ -180,21 +193,28 @@ header {
 
 .header-cart {
   .variable-style-flex-row-start;
-  width: 132px;
-  margin-left: auto;
+  /*width: 132px;*/
+  /*margin-left: auto;*/
+  padding-right: 30px;
 }
 
 .button-create-order {
-  background-color: @color-greenButton;
+  
+ 
+}
+
+.button-create-order a {
+  text-align: center;
+  /* min-width: 253px;*/
   font: 17px cuprum;
-  width: 148px;
-  padding-right: 2px;
+  padding: 11px 22px 11px 22px;
+  color: #ffff;
+  background-color: @color-greenButton;
 }
 
 .wrapper-header-middle {
   .variable-style-flex-row-space-between;
   .variable-width-basic;
-  align-items: flex-start;
   height: 112px;
   padding-top: 46px;
 }
@@ -253,9 +273,9 @@ header {
 }
 
 .header-nav-down {
- /* display: flex; 
+  display: flex; 
   flex-direction: row;
-  justify-content: space-evenly;*/
+  justify-content: space-evenly;
   position: relative;
   background-color: @color-lightBlueGray;
   height: 55px;
@@ -276,7 +296,7 @@ header {
   height: 5px;
 }
 
-.link-header-nav-down-master {
+/*.link-header-nav-down-master {
  width: 156px;
 }
 
@@ -303,7 +323,7 @@ width: 210px;
 .link-header-nav-down-contacts {
  width: 152px;
 }
-
+*/
 
 main {
   background-color: @color-mainBackgroundWhite;
@@ -332,12 +352,15 @@ main {
 
 .wrapper-button-goods-and-service-right {
   .variable-style-flex-column-space-between; 
+  flex-grow: 1;
 }
 
 .slider {
-  width: 620px;
+  /*width: 620px;*/
   background-image: url('./img/slider/slider_perforator.jpg');
   background-color: #adabaa;
+  flex-grow: 1;
+  margin-right: 20px;
 }
 
 .button-right,
@@ -351,27 +374,41 @@ main {
 .button-materials {
   background-color: @color-navSectionBackgroundDarkYellow;
   .variable-width-goodsService;
+  padding-left: 23px;
+  padding-bottom: 23px;
+  display: flex;
+
 }
 
 .button-instuments {
   background-color: @color-navSectionBackgroundBlue;
   .variable-width-goodsService;
+  padding-left: 23px;
+  padding-bottom: 23px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .button-technics {
   background-color: @color-navSectionBackgroundViolet;
   .variable-width-goodsService;
+  padding-left: 23px;
+  padding-bottom: 23px;
 }
 
 .button-discounts {
   background-color: @color-navSectionBackgroundGreen;
   .variable-width-goodsService;
+  padding-left: 23px;
+  padding-bottom: 23px;
   max-height: 123px;
 }
 
 .button-delivery {
   background-color: @color-navSectionBackgroundYellow;
   .variable-width-goodsService;
+  padding-left: 23px;
+  padding-bottom: 23px;
   max-height: 123px;
 }
 
@@ -392,8 +429,31 @@ main {
 
 .popular-goods,
 .popular-brands {
+  .variable-style-flex-row-space-between;
   background-color: @color-backgroundBeige;
   height: 89px;
+  padding-left: 30px;
+  padding-right: 24px;
+}
+
+.popular-goods h3 {
+  color: black;
+  font: bold 18px PT Sans;
+}
+
+.link-all-popular-goods-brands {
+  display: flex;
+  align-items: center;
+}
+
+.link-all-popular-goods-brands a {
+  text-align: center;
+  border-radius: 3px;
+  min-width: 253px;
+  font: 14px cuprum;
+  padding: 11px 0 11px 0;
+  color: @color-textWhite;
+  background-color: @color-lightRed;
 }
 
 .card {
@@ -458,16 +518,19 @@ main {
 
 
 footer {
+  min-width: 940px;
   background-color: @color-lightBlueGray;
   color: @color-textWhite;
 }
 
 .footer-up {
   .variable-width-basic;
+  height: 193px;
 }
 
 .wrapper-footer-down {
   background-color: @color-darkBlueGray;
+  height: 107px;
 }
 
 .footer-down {
