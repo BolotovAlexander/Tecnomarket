@@ -22,14 +22,9 @@
 
 @color-itemCardBorder: #eaeaea;
 
-.variable-width-goodsService() {
-  min-width: 300px;                  /*!!!!!!*/
-  width: auto;
-} 
-
 .variable-width-basic() {
   width: 940px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .variable-visually-hidden() {
@@ -40,10 +35,46 @@
   margin: -1px;
 }
 
+.variable-style-flex-row-space-between() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.variable-style-flex-row-start() {
+  display: flex; 
+  flex-direction: row;
+  justify-content: start;
+}
+
+.variable-style-flex-column-space-between() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.variable-header-button-login-registration() {
+  height: 47px;
+  border: medium none;
+  background: transparent;
+  background-color: @color-textWhite;
+  font: 21px cuprum;
+  color: black;
+}
+
+.variable-width-goodsService() {
+  width: 300px;            
+} 
+
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  width: 1200px;
+  height: 3151px;
 }
 
 ul {
@@ -66,6 +97,8 @@ a {
 
 h1 {
   color: @color-lightRed;
+  font: italic 100% cuprum;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -76,26 +109,32 @@ h1 {
 header {
   display: flex; 
   flex-direction: column;
+  justify-content: start;
   background-color: @color-headerBackgroundLightBlue;
   position: relative;
   color: @color-textWhite;
-  min-height: 320px;
+  height: 320px;
 }
 
 .wrapper-header-up {
   background-color: @color-darkBlueGray;
-  min-height: 42px;
 }
 
 .header-up {
  .variable-width-basic;
+ /*display: flex; 
+ flex-direction: row;
+ justify-content: space-between;*/
+ height: 42px;
+ font: 17px cuprum;
 }
 
 .technomart-link {
   background-color: @color-lightRed;
   width: 220px;
   position: relative;
-  height: 42px;
+  padding-top: 3px;
+  font: 24px cuprum;
 }
 
 .technomart-link::after {
@@ -108,26 +147,75 @@ header {
   height: 5px;
 }
 
+
+.header-search {
+  .variable-style-flex-row-start;
+  width: 287px;
+  margin-left: auto;
+}
+
+.header-search-img {
+  margin: 0 10px 0 16px;
+}
+
 .input-search {
   background-color: inherit;
   outline: none;
-  border: none
+  border: none;
+  color: @color-textWhite;
+}
+
+.header-bookmark {
+  .variable-style-flex-row-start;
+  width: 150px;
+}
+
+.header-bookmark-img {
+  margin: 0 12px 2px 0;
+}
+
+.header-cart-img {
+  margin: 0 16px 2px 0;
+}
+
+.header-cart {
+  .variable-style-flex-row-start;
+  width: 132px;
+  margin-left: auto;
 }
 
 .button-create-order {
   background-color: @color-greenButton;
-  color: @color-textWhite;
+  font: 17px cuprum;
+  width: 148px;
+  padding-right: 2px;
 }
 
-.header-down {
+.wrapper-header-middle {
+  .variable-style-flex-row-space-between;
   .variable-width-basic;
-  min-height: 56px;
-  padding-bottom: 60px;
+  align-items: flex-start;
+  height: 112px;
+  padding-top: 46px;
+}
+
+.header-title {
+  padding: 3px 0 0 52px;
+  margin: 0;
+  line-height: 147%;
 }
 
 .wrapper-header-tel {
+  .variable-style-flex-row-start;
+  width: 264px;
+  height: 39px;
   border: 3px solid @color-textWhite;
   color: @color-lightRed;
+  font: 21px cuprum;
+}
+
+.header-input-tel-img {
+  margin: 10px 40px 10px 13px;
 }
 
 .input-tel {
@@ -137,21 +225,83 @@ header {
   background-color: inherit;
 }
 
-.header-nav {
-  position: relative;
-  background-color: @color-lightBlueGray;
-  margin: 0px;
-  padding: 0px;
+.header-adress {
+  color: @color-lightBlueGray;
+  font: 14px cuprum;
+  margin: 8px 0 0 11px;
 }
 
-.header-nav::after {
+.wrapper-button-login-registration {
+  .variable-style-flex-row-space-between;
+}
+
+.button-login {
+  .variable-header-button-login-registration;
+  display: inline-flex;
+  width: 121px; 
+}
+
+.button-login-img {
+ margin: 4px 14px 0 7px;
+}
+
+.button-registration {
+  .variable-header-button-login-registration;
+  width: 150px;
+  margin-left: 10px;
+  
+}
+
+.header-nav-down {
+ /* display: flex; 
+  flex-direction: row;
+  justify-content: space-evenly;*/
+  position: relative;
+  background-color: @color-lightBlueGray;
+  height: 55px;
+  margin: 0px;
+  padding-top: 1px;
+  .variable-width-basic;
+  font: 17px cuprum;
+  color: @color-textWhite;
+}
+
+.header-nav-down::after {
   background-color: @color-darkBlueGray;
   position: absolute;
   content: "";
   display: block;
-  bottom: -5px;
+  top: 55px;
   width: 100%;
   height: 5px;
+}
+
+.link-header-nav-down-master {
+ width: 156px;
+}
+
+.link-header-nav-down-company {
+ width: 90px;
+}
+
+.link-header-nav-down-catalog {
+ width: 146px;
+}
+
+.link-header-nav-down-news {
+ width: 80px;
+}
+
+.link-header-nav-down-offer {
+width: 210px;
+}
+
+.link-header-nav-down-delivery {
+ width: 96px;
+}
+
+.link-header-nav-down-contacts {
+ width: 152px;
 }
 
 
@@ -161,39 +311,31 @@ main {
 }
 
 .wrapper-nav-goods-and-service {
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 942px;
-  min-height: 410px;
+  .variable-style-flex-column-space-between;
   .variable-width-basic;
+  height: 409px;
   padding-top: 59px;
   padding-bottom: 53px;
+  color: @color-textWhite;
 }
 
 .wrapper-button-goods-and-service-up {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between;
+  .variable-style-flex-row-space-between;
+  height: 123px;
 }
 
 .wrapper-button-goods-and-service-down {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between;
+  .variable-style-flex-row-space-between;
+  padding-top: 20px;
+  height: 266px;
 }
 
 .wrapper-button-goods-and-service-right {
-  display: flex; 
-  flex-direction: column;
-  flex-grow: 1;
-  margin-left: 21px;
-  justify-content: space-between;
+  .variable-style-flex-column-space-between; 
 }
 
 .slider {
   width: 620px;
-  height: 266px;
   background-image: url('./img/slider/slider_perforator.jpg');
   background-color: #adabaa;
 }
@@ -209,20 +351,16 @@ main {
 .button-materials {
   background-color: @color-navSectionBackgroundDarkYellow;
   .variable-width-goodsService;
-  flex-grow: 1;
 }
 
 .button-instuments {
   background-color: @color-navSectionBackgroundBlue;
-  margin: 0px 21px;
   .variable-width-goodsService;
-  flex-grow: 1;
 }
 
 .button-technics {
   background-color: @color-navSectionBackgroundViolet;
   .variable-width-goodsService;
-  flex-grow: 1;
 }
 
 .button-discounts {
@@ -240,9 +378,7 @@ main {
 .wrapper-popular-goods,
 .wrapper-popular-brands {
   .variable-width-basic;
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
+  .variable-style-flex-column-space-between;
   min-height: 420px;
 }
 
@@ -261,15 +397,11 @@ main {
 }
 
 .card {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between;
+  .variable-style-flex-row-space-between;
 }
 
 .card-item {
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
+  .variable-style-flex-column-space-between;
   width: 220px;
   height: 320px;
 }
@@ -277,7 +409,7 @@ main {
 .card-item,
 .brand {
   border: 1px solid @color-itemCardBorder;
-  padding: auto;
+ /* padding: auto;*/
 }
 
 .brand {
@@ -288,21 +420,16 @@ main {
 .service {
   background-color: @color-serviceBackgroundLightBlue;
   .variable-width-basic;
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
+  .variable-style-flex-column-space-between;
+  margin-top: 85px;
 }
 
 .service-down {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between;
+  .variable-style-flex-row-space-between;
 }
 
 .buttons-service {
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
+  .variable-style-flex-column-space-between;
 }
 
 .service-delivery {

@@ -17,27 +17,29 @@
     <header>
       <div class="wrapper-header-up">
         <ul class="header-up">
-          <li class="technomart-link"><a href="index.html">Техномарт</a></li>
+          <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
           <li class="header-search">
-            <img src="./img/icon/icon_search.png" alt="лупа">
-            <input class="input-search" value="Поиск:">
+            <img class="header-search-img" src="./img/icon/icon_search.png" alt="лупа">
+            <input class="input-search" value=" Поиск:">
           </li>
-          <li>
-            <img src="./img/icon/icon_bookmark.png" alt="закладка">
-            Закладки:
+          <li class="header-bookmark" value=" Закладки:">
+            <img class="header-bookmark-img" src="./img/icon/icon_bookmark.png" alt="закладка">
+             Закладки:&nbsp;
+             <div class="header-bookmark-value">0</div>
           </li>
-          <li>
-            <img src="./img/icon/icon_cart.png" alt="корзина">
-            Корзина:
+          <li class="header-cart">
+            <img class="header-cart-img" src="./img/icon/icon_cart.png" alt="корзина">
+             Корзина:&nbsp;
+             <div class="header-cart-value">0</div>
           </li>
           <li class="button-create-order">
             <a href="#">Оформить заказ</a>
           </li>
         </ul>
       </div>
-      <div class="header-down">
+      <div class="wrapper-header-middle">
         <h1>
-          <p>
+          <p class="header-title">
             Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта
@@ -45,31 +47,30 @@
         </h1>
         <div>
           <div class="wrapper-header-tel">
-            <img src="./img/icon/icon_phone.png" alt="телефон">
-            <input class="input-tel" type="tel" value="+7 (812) 555-05-55">
+            <img class="header-input-tel-img"src="./img/icon/icon_phone.png" alt="телефон">
+            <input class="input-tel" type="tel" value="+7 (812) 555-05-55" disabled="disabled">
           </div>
-          <p>г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
+          <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div>
-          <button>
-            <img src="./img/icon/icon_login.png" alt="логин">
+        <div class="wrapper-button-login-registration">
+          <button class="button-login">
+            <img class="button-login-img" src="./img/icon/icon_login.png" alt="логин">
             Войти
           </button>
-          <button>Регистрация</button>
+          <button class="button-registration">Регистрация</button>
         </div>
-
-        <nav class="header-nav">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
+      <nav>
+        <ul class="header-nav-down">
+          <li class="link-header-nav-down-master"><a href="#">Главная</a></li>
+          <li class="link-header-nav-down-company"><a href="#">Компания</a></li>
+          <li class="link-header-nav-down-catalog"><a href="#">Каталог</a></li>
+          <li class="link-header-nav-down-news"><a href="#">Новости</a></li>
+          <li class="link-header-nav-down-offer"><a href="#">Спецпредложения</a></li>
+          <li class="link-header-nav-down-delivery"><a href="#">Доставка</a></li>
+          <li class="link-header-nav-down-contacts"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -134,23 +135,23 @@
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
-            <img src="./img/goods/goods_Bosch BFG 6000.jpg" alt="Bosch">
-            <h3>Перфоратор Bosch BFG 6000</h3>
+            <img src="./img/goods/goods_Bosch BFG 3000.jpg" alt="Bosch">
+            <h3>Перфоратор Bosch BFG 3000</h3>
             <span class="old-price">22500 P.</span>
             <div class="new-price">15500 P.</div>
           </li>
           <li class="card-item">
-            <img src="./img/goods/goods_Bosch BFG 3000.jpg" alt="Bosch">
-            <h3>Перфоратор Bosch BFG 3000</h3>
-            <span class="old-price"></span>
-            <div class="new-price">12500 P.</div>
+            <img src="./img/goods/goods_Bosch BFG 6000.jpg" alt="Bosch">
+            <h3>Перфоратор Bosch BFG 6000</h3>
+            <span class="old-price">30500 P.</span>
+            <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
             <img src="./img/goods/goods_Bosch BFG 2000.jpg" alt="Bosch">
             <img src="./img/logo/logo_new.png" alt="новинка">
             <h3>Перфоратор Bosch BFG 2000</h3>
-            <span class="old-price">32500 P.</span>
-            <div class="new-price">25500 P.</div>
+            <span class="old-price"></span>
+            <div class="new-price">12500 P.</div>
           </li>
         </ul>
       </article>
@@ -210,9 +211,9 @@
         <section class="service-down">
             <h3 class="visually-hidden">Сервисы</h3>
             <ul class="buttons-service">
-              <li><button class="button-delivery">Доставка</button></li>
-              <li><button class="button-guarantee">Гарантия</button></li>
-              <li><button class="button-credit">Кредит</button></li>
+              <li><button class="button-service-delivery">Доставка</button></li>
+              <li><button class="button-service-guarantee">Гарантия</button></li>
+              <li><button class="button-service-credit">Кредит</button></li>
             </ul>
             <img src="./img/background/background_separator.png"> 
             <div class="service-delivery">
