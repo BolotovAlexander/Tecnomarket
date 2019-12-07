@@ -23,6 +23,8 @@
 @color-itemCardBorder: #eaeaea;
 
 .variable-width-basic() {
+ /* width: 940px;
+  margin: auto;*/
   min-width: 940px;
   margin: 0 auto;
 }
@@ -273,17 +275,9 @@ header {
 }
 
 .header-nav-down {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-evenly;
   position: relative;
-  background-color: @color-lightBlueGray;
-  height: 55px;
-  margin: 0px;
-  padding-top: 1px;
-  .variable-width-basic;
-  font: 17px cuprum;
-  color: @color-textWhite;
+  width: 940px;
+  margin: auto;
 }
 
 .header-nav-down::after {
@@ -291,9 +285,23 @@ header {
   position: absolute;
   content: "";
   display: block;
-  top: 55px;
+  bottom: -5px;
   width: 100%;
   height: 5px;
+}
+
+.link-header-nav {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.link-header-nav a {
+  flex-grow: inherit;
+  font: 17px cuprum;
+  padding: 18px 0 18px 0;
+  color: @color-textWhite;
+  background-color: @color-lightBlueGray;
 }
 
 /*.link-header-nav-down-master {
