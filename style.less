@@ -23,10 +23,10 @@
 @color-itemCardBorder: #eaeaea;
 
 .variable-width-basic() {
- /* width: 940px;
-  margin: auto;*/
-  min-width: 940px;
-  margin: 0 auto;
+  max-width: 940px;
+  margin: auto;
+  /*min-width: 940px;
+  margin: 0 auto;*/
 }
 
 .variable-visually-hidden() {
@@ -56,7 +56,6 @@
 }
 
 .variable-header-button-login-registration() {
-  height: 47px;
   border: medium none;
   background: transparent;
   background-color: @color-textWhite;
@@ -115,7 +114,6 @@ h2 {
 
 
 header {
-  .variable-width-basic;
   .variable-style-flex-column-space-between;
   background-color: @color-headerBackgroundLightBlue;
   position: relative;
@@ -127,12 +125,10 @@ header {
 
 .wrapper-header-up {
   background-color: @color-darkBlueGray;
-  margin: 0;
 }
 
 .header-up {
- /*.variable-width-basic;*/
- min-width: 940px;
+ .variable-width-basic;
  display: flex; 
  flex-direction: row;
  justify-content: center;
@@ -141,11 +137,10 @@ header {
 
 .technomart-link {
   background-color: @color-lightRed;
-  /*width: 220px;*/
   position: relative;
   padding-top: 3px;
   padding-left: 55px;
-  padding-right: 56px;
+  padding-right: 55px;
   font: 24px cuprum;
 }
 
@@ -159,11 +154,8 @@ header {
   height: 5px;
 }
 
-
 .header-search {
   .variable-style-flex-row-start;
- /* width: 287px;*/
-  /*margin-left: auto;*/
   padding-left: 17px;
   padding-right: 86px;
 }
@@ -177,12 +169,12 @@ header {
   outline: none;
   border: none;
   color: @color-textWhite;
+  width: 193px;
 }
 
-.header-bookmark {
-  .variable-style-flex-row-start;
- /* width: 150px;*/
-  padding-right: 46px;
+.header-up-element {
+ padding-left: 16px;
+ padding-right: 31px;
 }
 
 .header-bookmark-img {
@@ -191,13 +183,6 @@ header {
 
 .header-cart-img {
   margin: 0 16px 2px 0;
-}
-
-.header-cart {
-  .variable-style-flex-row-start;
-  /*width: 132px;*/
-  /*margin-left: auto;*/
-  padding-right: 30px;
 }
 
 .button-create-order {
@@ -209,20 +194,25 @@ header {
   text-align: center;
   /* min-width: 253px;*/
   font: 17px cuprum;
-  padding: 11px 22px 11px 22px;
+  padding: 11px 23px 11px 19px;
   color: #ffff;
   background-color: @color-greenButton;
 }
 
 .wrapper-header-middle {
   .variable-style-flex-row-space-between;
+  /*.variable-style-flex-row-start;*/
   .variable-width-basic;
-  height: 112px;
-  padding-top: 46px;
+ /* height: 112px;
+  padding-top: 46px;*/
+  width: 940px;
+}
+.header-middle-element {
+  padding-left: 60px;
 }
 
 .header-title {
-  padding: 3px 0 0 52px;
+ /* padding: 3px 0 0 52px;*/
   margin: 0;
   line-height: 147%;
 }
@@ -253,31 +243,34 @@ header {
   margin: 8px 0 0 11px;
 }
 
-.wrapper-button-login-registration {
+.wrapper-header-middle :last-child {
   .variable-style-flex-row-space-between;
 }
 
 .button-login {
   .variable-header-button-login-registration;
   display: inline-flex;
-  width: 121px; 
+  padding-left: 14px;
+  padding-right: 27px;
 }
 
 .button-login-img {
- margin: 4px 14px 0 7px;
+ margin: 0px 14px 0 7px;
 }
 
 .button-registration {
   .variable-header-button-login-registration;
-  width: 150px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-left: 10px;
-  
+  justify-content: center;
 }
 
 .header-nav-down {
   position: relative;
   width: 940px;
   margin: auto;
+  background-color: @color-lightBlueGray;
 }
 
 .header-nav-down::after {
@@ -288,6 +281,14 @@ header {
   bottom: -5px;
   width: 100%;
   height: 5px;
+}
+
+.header-nav-down :last-child {
+  padding-right: 24px;
+}
+
+.header-nav-down :first-child {
+  padding-left: 22px;
 }
 
 .link-header-nav {
@@ -301,37 +302,7 @@ header {
   font: 17px cuprum;
   padding: 18px 0 18px 0;
   color: @color-textWhite;
-  background-color: @color-lightBlueGray;
 }
-
-/*.link-header-nav-down-master {
- width: 156px;
-}
-
-.link-header-nav-down-company {
- width: 90px;
-}
-
-.link-header-nav-down-catalog {
- width: 146px;
-}
-
-.link-header-nav-down-news {
- width: 80px;
-}
-
-.link-header-nav-down-offer {
-width: 210px;
-}
-
-.link-header-nav-down-delivery {
- width: 96px;
-}
-
-.link-header-nav-down-contacts {
- width: 152px;
-}
-*/
 
 main {
   background-color: @color-mainBackgroundWhite;
