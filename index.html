@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Technomart</title>
+    <link href='fonts/Cuprum' rel='stylesheet' type='text/css'>
+    <link href='fonts/PTSans' rel='stylesheet' type='text/css'>
     <link href="normalize.css" rel="stylesheet" />
     <link href="style.less" type="text/css" rel="stylesheet/less" />
     <script src="./node_modules/less/dist/less.min.js" type="text/javascript"></script>
@@ -18,7 +20,7 @@
       <div class="wrapper-header-up">
         <ul class="header-up">
           <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
-          <li class="header-up-element">
+          <li class="header-up-element-input">
             <img class="header-search-img" src="./img/icon/icon_search.png" alt="лупа">
             <input class="input-search" value="Поиск:">
           </li>
@@ -38,21 +40,18 @@
         </ul>
       </div>
       <div class="wrapper-header-middle">
-        <h1 class="header-middle-element">
+        <h1 class="header-middle-element-left">
           <p class="header-title">
             Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта
           </p>
         </h1>
-        <div class="header-middle-element">
-          <div class="wrapper-header-tel">
-            <img class="header-input-tel-img"src="./img/icon/icon_phone.png" alt="телефон">
-            <input class="input-tel" type="tel" value="+7 (812) 555-05-55" disabled="disabled">
-          </div>
+        <div class="header-middle-element-tel">
+          <a class="input-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="header-middle-element">
+        <div class="header-middle-element-right">
           <button class="button-login">
             <img class="button-login-img" src="./img/icon/icon_login.png" alt="логин">
             Войти
@@ -79,19 +78,15 @@
         <div class="wrapper-button-goods-and-service-up">
           <div class="button-materials">
             <h3>Материалы</h3>
-            <button>НА ЛЮБОЙ ВКУС</button>
-            <img src="./img/logo/logo_materials.png" alt="ведро краски">
-            <img src="./img/logo/logo_new.png" alt="новинка">
+            <button class="button-arround-slider">НА ЛЮБОЙ ВКУС</button>
           </div>
           <div class="button-instuments">
             <h3>Инструмент</h3>
-            <button>НА ВСЕ СЛУЧАИ</button>
-            <img src="./img/logo/logo_instruments.png" alt="дрель">
+            <button class="button-arround-slider">НА ВСЕ СЛУЧАИ</button>
           </div>
           <div class="button-technics">
             <h3>Техника</h3>
-            <button>ДЛЯ СТРОЙКИ</button>
-            <img src="./img/logo/logo_technics.png" alt="трактор">
+            <button class="button-arround-slider">ДЛЯ СТРОЙКИ</button>
           </div>
         </div>
 
@@ -110,13 +105,11 @@
           <div class="wrapper-button-goods-and-service-right">
             <div class="button-discounts">
               <h3>Скидки 50%</h3>
-              <button>НА 350 ТОВАРОВ</button>
-              <img src="./img/logo/logo_discounts.png" alt="корзина">
+              <button class="button-arround-slider">НА 350 ТОВАРОВ</button>
             </div>
             <div class="button-delivery">
               <h3>Доставка</h3>
-              <button>БЕСПЛАТНО</button>
-              <img src="./img/logo/logo_delivery.png" alt="фургон">
+              <button class="button-arround-slider">БЕСПЛАТНО</button>
             </div>
           </div>
         </div>
@@ -125,33 +118,28 @@
       <article class="wrapper-popular-goods">
         <div class="popular-goods">
           <h2>Популярные товары</h2>
-          <div class="link-all-popular-goods-brands">
-            <a href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
-          </div>
+          <a href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
         </div>
         <ul class="card">
           <li class="card-item">
-            <img src="./img/goods/goods_Bosch BFG 9000.jpg" alt="Bosch">
-            <h3>Перфоратор Bosch BFG 9000</h3>
+            <!---<img src="./img/goods/goods_Bosch BFG 9000.jpg" alt="Bosch">-->
+            <h3>Перфоратор BOSCH<br>BFG 9000</h3>
             <span class="old-price">32500 P.</span>
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
-            <img src="./img/goods/goods_Bosch BFG 3000.jpg" alt="Bosch">
-            <h3>Перфоратор Bosch BFG 3000</h3>
+            <h3>Перфоратор BOSCH<br>BFG 3000</h3>
             <span class="old-price">22500 P.</span>
             <div class="new-price">15500 P.</div>
           </li>
           <li class="card-item">
-            <img src="./img/goods/goods_Bosch BFG 6000.jpg" alt="Bosch">
-            <h3>Перфоратор Bosch BFG 6000</h3>
+            <h3>Перфоратор BOSCH<br>BFG 6000</h3>
             <span class="old-price">30500 P.</span>
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
-            <img src="./img/goods/goods_Bosch BFG 2000.jpg" alt="Bosch">
-            <img src="./img/logo/logo_new.png" alt="новинка">
-            <h3>Перфоратор Bosch BFG 2000</h3>
+            <!---<img src="./img/logo/logo_new.png" alt="новинка">--->
+            <h3>Перфоратор BOSCH<br>BFG 2000</h3>
             <span class="old-price"></span>
             <div class="new-price">12500 P.</div>
           </li>
@@ -161,44 +149,33 @@
       <article class="wrapper-popular-brands">
         <div class="popular-brands">
           <h2>Популярные производители</h2>
-          <div class="link-all-popular-goods-brands">
-            <a href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
-          </div>
+          <a href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
         </div>
         <ul class="card">
           <li class="brand">
-            <h3 class="visually-hidden">Bosch</h3>
-            <img src="./img/brands/brands_Bosch.png" alt="Bosch">
+            <a href="#"><h3 class="visually-hidden">Bosch</h3></a>
           </li>
           <li class="brand">
-            <h3 class="visually-hidden">Makita</h3>
-            <img src="./img/brands/brands_Makita.png" alt="Makita">
+            <a href="#"><h3 class="visually-hidden">Makita</h3></a>
           </li>
           <li class="brand">
-            <h3 class="visually-hidden">DeWalt</h3>
-            <img src="./img/brands/brands_DeWalt.png" alt="DeWalt">
+            <a href="#"><h3 class="visually-hidden">DeWalt</h3></a>
           </li>
           <li class="brand">
-            <h3 class="visually-hidden">Интерскол</h3>
-            <img src="./img/brands/brands_Interscol.png" alt="Интерскол">
+            <a href="#"><h3 class="visually-hidden">Интерскол</h3></a>
           </li>
-        </ul>
-        <ul class="card">
+        
           <li class="brand">
-            <h3 class="visually-hidden">Hitachi</h3>
-            <img src="./img/brands/brands_Hitachi.png" alt="Hitachi">
+            <a href="#"><h3 class="visually-hidden">Hitachi</h3></a>
           </li>
           <li class="brand">
-            <h3 class="visually-hidden">LG</h3>
-            <img src="./img/brands/brands_LG.png" alt="LG">
+            <a href="#"><h3 class="visually-hidden">LG</h3></a>
           </li>
           <li class="brand">
-            <h3 class="visually-hidden">AEG</h3>
-            <img src="./img/brands/brands_AEG.png" alt="AEG">
+            <a href="#"><h3 class="visually-hidden">AEG</h3></a>
           </li>
           <li class="brand">
-            <h3 class="visually-hidden">Metabo</h3>
-            <img src="./img/brands/brands_Metabo.png" alt="Metabo">
+            <a href="#"><h3 class="visually-hidden">Metabo</h3></a>
           </li>
         </ul>
       </article>
@@ -230,14 +207,14 @@
                 </p>
             </div>
             <div class="service-guarantee">
-                <h3>ГАРАНТИЯ</h3>
-                <p>
-                  Если купленный у нас товар поломается или заискрит,</br>
-                  а также в случае пожара, спровоцированного его возгоранием,</br>
-                  вы всегда можете быть уверенны в нашей гарантии. Мы обменяем</br>
-                  сгоревший товар на новый.</br>
-                  Дом уж восстановите как-нибудь сами.
-                </p>
+              <h3>ГАРАНТИЯ</h3>
+              <p>
+                Если купленный у нас товар поломается или заискрит,</br>
+                а также в случае пожара, спровоцированного его возгоранием,</br>
+                вы всегда можете быть уверенны в нашей гарантии. Мы обменяем</br>
+                сгоревший товар на новый.</br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
             </div>
             <div class="service-credit">
                 <h3>КРЕДИТ</h3>
@@ -252,8 +229,7 @@
       <div class="company-contacts">
         <h2 class="visually-hidden">О компании и контакты</h2>
         <section>
-          <h3 class="visually-hidden">О компании Техномарт</h3>
-          <span>&laquoКОМПАНИЯ ТЕХНОМАРТ&raquo</span></br>
+          <h3>КОМПАНИЯ &laquoТЕХНОМАРТ&raquo</h3>
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
           строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</br>
           Мы можем доставить ваш товар в самые отдалённые точки России!</br>
@@ -264,11 +240,16 @@
           <a href="#">ПОДРОБНЕЕ О КОМПАНИИ</a>
         </section>
         <section>
-          <h3>Контакты</h3>
+          <h3>КОТНАКТЫ</h3>
           Вы можете забрать товар сами,
           заехав в наш офис:
           <button class="pop-up-map"><img src="./img/background/small map.jpg" alt="превью карты"></button>
-          <button>ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
+          <button class="button-write-us">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
+        </section>
+        <section class="pop-up-write-us-form">
+          <div>
+            текст письма
+          </div>
         </section>
       </div>
     </main>
@@ -276,7 +257,7 @@
     <footer>
       <div class="footer-up">
         <nav>
-          <a href="#">Техномарт</a>
+          <a class="technomart-link-footer" href="#"> ТЕХНОМАРТ</a>
           <ul>
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -287,7 +268,7 @@
         </nav>
         <div>
           г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</br>
-          <input class="input-tel" type="tel" value="+7 (812) 555-05-55">
+          <a class="input-tel" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
         </div>
         <nav>
           <ul>

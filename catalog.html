@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Technomart</title>
+    <link href='fonts/Cuprum' rel='stylesheet' type='text/css'>
+    <link href='fonts/PTSans' rel='stylesheet' type='text/css'>
     <link href="normalize.css" rel="stylesheet" />
     <link href="style.less" type="text/css" rel="stylesheet/less" />
     <script src="./node_modules/less/dist/less.min.js" type="text/javascript"></script>
@@ -17,63 +19,62 @@
     <header>
       <div class="wrapper-header-up">
         <ul class="header-up">
-          <li class="technomart-link"><a href="index.html">Техномарт</a></li>
-          <li class="header-search">
-            <img src="./img/icon/icon_search.png" alt="лупа">
+          <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
+          <li class="header-up-element">
+            <img class="header-search-img" src="./img/icon/icon_search.png" alt="лупа">
             <input class="input-search" value="Поиск:">
           </li>
-          <li>
-            <img src="./img/icon/icon_bookmark.png" alt="закладка">
-            Закладки:
+          <li class="header-up-element" value=" Закладки:">
+            <img class="header-bookmark-img" src="./img/icon/icon_bookmark.png" alt="закладка">
+             Закладки:&nbsp;
+             <div class="header-bookmark-value">0</div>
           </li>
-          <li>
-            <img src="./img/icon/icon_cart.png" alt="корзина">
-            Корзина:
+          <li class="header-up-element">
+            <img class="header-cart-img" src="./img/icon/icon_cart.png" alt="корзина">
+             Корзина:&nbsp;
+             <div class="header-cart-value">0</div>
           </li>
           <li class="button-create-order">
             <a href="#">Оформить заказ</a>
           </li>
         </ul>
       </div>
-      <div class="header-down">
-        <h1>
-          <p>
+      <div class="wrapper-header-middle">
+        <h1 class="header-middle-element">
+          <p class="header-title">
             Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта
           </p>
         </h1>
-        <div>
+        <div class="header-middle-element">
           <div class="wrapper-header-tel">
-            <img src="./img/icon/icon_phone.png" alt="телефон">
-            <input class="input-tel" type="tel" value="+7 (812) 555-05-55">
+            <a class="input-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <p>г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
         </div>
-        <div>
-          <button>
-            <img src="./img/icon/icon_login.png" alt="логин">
+        <div class="header-middle-element">
+          <button class="button-login">
+            <img class="button-login-img" src="./img/icon/icon_login.png" alt="логин">
             Войти
           </button>
-          <button>Регистрация</button>
+          <button class="button-registration">Регистрация</button>
         </div>
-
-        <nav class="header-nav">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
+      <nav>
+        <ul class="header-nav-down">
+          <li class="link-header-nav"><a href="#">Главная</a></li>
+          <li class="link-header-nav"><a href="#">Компания</a></li>
+          <li class="link-header-nav"><a href="#">Каталог</a></li>
+          <li class="link-header-nav"><a href="#">Новости</a></li>
+          <li class="link-header-nav"><a href="#">Спецпредложения</a></li>
+          <li class="link-header-nav"><a href="#">Доставка</a></li>
+          <li class="link-header-nav"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-    
     </main>
 
     <footer>
@@ -90,7 +91,8 @@
         </nav>
         <div>
           г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</br>
-          <input class="input-tel" type="tel" value="+7 (812) 555-05-55">
+          <!----<input class="input-tel" type="tel" value="+7 (812) 555-05-55">-->
+          <a class="input-tel" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
         </div>
         <nav>
           <ul>
