@@ -21,18 +21,15 @@
         <ul class="header-up">
           <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
           <li class="header-up-element-input">
-            <img class="header-search-img" src="./img/icon/icon_search.png" alt="лупа">
-            <input class="input-search" value="Поиск:">
+            <input class="input-search" placeholder="Поиск:">
           </li>
-          <li class="header-up-element" value=" Закладки:">
-            <img class="header-bookmark-img" src="./img/icon/icon_bookmark.png" alt="закладка">
-             Закладки:&nbsp;
-             <div class="header-bookmark-value">0</div>
+          <li class="header-up-element-bookmarks" value=" Закладки:">
+            Закладки:&nbsp;
+            <div class="header-bookmark-value">0</div>
           </li>
-          <li class="header-up-element">
-            <img class="header-cart-img" src="./img/icon/icon_cart.png" alt="корзина">
-             Корзина:&nbsp;
-             <div class="header-cart-value">0</div>
+          <li class="header-up-element-cart">
+            Корзина:&nbsp;
+            <div class="header-cart-value">0</div>
           </li>
           <li class="button-create-order">
             <a href="#">Оформить заказ</a>
@@ -79,6 +76,7 @@
           <div class="button-materials">
             <h3>Материалы</h3>
             <button class="button-arround-slider">НА ЛЮБОЙ ВКУС</button>
+            <div class="new">new</div>
           </div>
           <div class="button-instuments">
             <h3>Инструмент</h3>
@@ -92,15 +90,21 @@
 
         <div  class="wrapper-button-goods-and-service-down">
           <div class="slider">
-            <p><span>ПЕРФОРАТОРЫ</span></p>
-            настоящие мужские игрушки
-            <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+          <div>
+            <span>ПЕРФОРАТОРЫ</span></br>
+            Настоящие мужские игрушки
+          </div>
+          <div class="slider-button">
             <button class="button-left"><img src="./img/icon/icon_left.png" alt="стрелка влево"></button>
             <button class="button-right"><img src="./img/icon/icon_right.png" alt="стрелка вправо"></button>
+          </div>
+          <div>
+            <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
             <div class="slider-radio">
               <div class="slider-left-radio"></div>
               <div class="slider-right-radio"></div>
             </div>
+          </div>
           </div>
           <div class="wrapper-button-goods-and-service-right">
             <div class="button-discounts">
@@ -117,38 +121,53 @@
 
       <article class="wrapper-popular-goods">
         <div class="popular-goods">
-          <h2>Популярные товары</h2>
+          <h2>ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
           <a href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
         </div>
         <ul class="card">
           <li class="card-item">
-            <!---<img src="./img/goods/goods_Bosch BFG 9000.jpg" alt="Bosch">-->
+            <div class="wrapper-card-item-buttons">
+              <button class="button-card-item-buy">КУПИТЬ</button>
+              <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+            </div>
             <h3>Перфоратор BOSCH<br>BFG 9000</h3>
             <span class="old-price">32500 P.</span>
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
+            <div class="wrapper-card-item-buttons">
+              <button class="button-card-item-buy">КУПИТЬ</button>
+              <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+            </div>
             <h3>Перфоратор BOSCH<br>BFG 3000</h3>
             <span class="old-price">22500 P.</span>
             <div class="new-price">15500 P.</div>
           </li>
           <li class="card-item">
+            <div class="wrapper-card-item-buttons">
+              <button class="button-card-item-buy">КУПИТЬ</button>
+              <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+            </div>
             <h3>Перфоратор BOSCH<br>BFG 6000</h3>
             <span class="old-price">30500 P.</span>
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
-            <!---<img src="./img/logo/logo_new.png" alt="новинка">--->
+            <div class="wrapper-card-item-buttons">
+              <button class="button-card-item-buy">КУПИТЬ</button>
+              <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+            </div>
             <h3>Перфоратор BOSCH<br>BFG 2000</h3>
             <span class="old-price"></span>
             <div class="new-price">12500 P.</div>
+            <div class="new">new</div>
           </li>
         </ul>
       </article>
 
       <article class="wrapper-popular-brands">
         <div class="popular-brands">
-          <h2>Популярные производители</h2>
+          <h2>ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
           <a href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
         </div>
         <ul class="card">
@@ -228,35 +247,65 @@
 
       <div class="company-contacts">
         <h2 class="visually-hidden">О компании и контакты</h2>
-        <section>
+        <section class="company-contacts-left">
           <h3>КОМПАНИЯ &laquoТЕХНОМАРТ&raquo</h3>
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-          строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</br>
-          Мы можем доставить ваш товар в самые отдалённые точки России!</br>
-          Техномарт работает со многими транспортными компаниями:</br>
-          <div>Деловые линии</div>
-          <div>Автотрейдинг</div>
-          <div>ЖелДорЭкспедиция</div>
+          <div class="paragraph">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и</br>
+            строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
+          </div>
+          <div class="paragraph">Мы можем доставить ваш товар в самые отдалённые точки России!</br>
+            Техномарт работает со многими транспортными компаниями:
+          </div>
+          <div class="delivery-company">Деловые линии</div>
+          <div class="delivery-company">Автотрейдинг</div>
+          <div class="delivery-company">ЖелДорЭкспедиция</div>
           <a href="#">ПОДРОБНЕЕ О КОМПАНИИ</a>
         </section>
-        <section>
-          <h3>КОТНАКТЫ</h3>
-          Вы можете забрать товар сами,
-          заехав в наш офис:
-          <button class="pop-up-map"><img src="./img/background/small map.jpg" alt="превью карты"></button>
+        <section class="company-contacts-right">
+          <h3>КОНТАКТЫ</h3>
+          <div class="paragraph">Вы можете забрать товар сами,</br>
+            заехав в наш офис:
+          </div>
+          <button class="button-pop-up-map"><img src="./img/background/small map.jpg" alt="превью карты"></button>
           <button class="button-write-us">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
         </section>
-        <section class="pop-up-write-us-form">
-          <div>
-            текст письма
-          </div>
+        <section id="pop-up-map" class="pop-up-map-section">
+          <div class="wrapper-pop-up-map-big">
+            <img class="big-map-img" src="./img/background/big map2.jpg" alt="большая карта">
+            <button id="button-pop-up-big-map-close" class="button-close" onclick=""></button>
+         </div>
+          
         </section>
+        <form id="form-write-us" class="pop-up-write-us-form">
+          <div class="wrapper-write-us-form">
+            <div class="wrapper-pop-up-write-us-up">
+              <button id="button-pop-up-write-us-form-close" class="button-close"
+               onclick="
+               document.body.querySelector('pop-up-write-us-form').style.display = 'none'" 
+               value="Закрыть форму отправки сообщения"></button>
+              <div class="pop-up-write-us-up-left">
+                Ваше имя:
+                <input class="input-pop-up-write-us-name" id="name" placeholder="Представьтесь, пожалуйста">
+              </div>
+              <div class="pop-up-write-us-up-right">
+                Ваш e-mail:
+                <input class="input-pop-up-write-us-email"  id="email" placeholder="Для отправки ответа">
+              </div>
+            </div>
+            <div class="wrapper-pop-up-write-us-middle">
+              Текст письма:
+              <textarea class="input-pop-up-write-us-text" placeholder="В свободной форме"></textarea>
+            </div>
+            <div class="wrapper-pop-up-write-us-down">
+              <button class="button-pop-up-write-us-send">ОТПРАВИТЬ</button>
+            </div>
+          </div> 
+        </form>
       </div>
     </main>
 
     <footer>
       <div class="footer-up">
-        <nav>
+        <nav class="footer-up-nav-up">
           <a class="technomart-link-footer" href="#"> ТЕХНОМАРТ</a>
           <ul>
             <li><a href="#">Компания</a></li>
@@ -266,11 +315,12 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div>
-          г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</br>
-          <a class="input-tel" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
-        </div>
-        <nav>
+        
+        <nav class="footer-up-nav-down">
+          <address class="footer-up-adress">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</br>
+              <a class="input-tel" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
+          </address>
           <ul>
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
@@ -281,37 +331,37 @@
       </div>
       <div class="wrapper-footer-down">
         <div class="footer-down">
-          <p>&copy 2010-2017 Компания &laquoТехномарт&raquo</br>
+          <div class="footer-down-text">
+            <p>&copy 2010-2017 Компания &laquoТехномарт&raquo</br>
             Все права защищены</p>
+          </div>
           <nav>
-            <ul>
-              <li class="social-network">
-                <a href="#vkontakte" style="color: white">
-                  <img src="./img/icon/icon_vk.png" alt="VK">
-                </a>
-              </li>
-              <li class="social-network">
-                <a href="#facebook" style="color: white">
-                  <img src="./img/icon/icon_fb.png" alt="f">
-                </a>
-              </li>
-              <li class="social-network">
-                <a href="#instagram" style="color: white">
-                  <img src="./img/icon/icon_insta.png" alt="Inst">
-                </a>
-              </li>
-            </ul>
-            <ul>
-              <li>Обратная связь:</li>
-              <li><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-              <li>Разработано -</li>
-              <li><a href="htmlacademy.ru">htmlacademy.ru</a></li>
-            </ul>
+              <ul>
+                <li class="social-network">
+                  <a href="#vkontakte" style="color: white">
+                    <img src="./img/icon/icon_vk.png" alt="VK">
+                  </a>
+                </li>
+                <li class="social-network">
+                  <a href="#facebook" style="color: white">
+                    <img src="./img/icon/icon_fb.png" alt="f">
+                  </a>
+                </li>
+                <li class="social-network">
+                  <a href="#instagram" style="color: white">
+                    <img src="./img/icon/icon_insta.png" alt="Inst">
+                  </a>
+                </li>
+              </ul>
+              <div class="footer-mail-us">
+                Обратная связь:</br>
+                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </div>
+              <div class="footer-our-link">
+                Разработано -</br>
+                <a href="htmlacademy.ru">htmlacademy.ru</a>
+              </div>
           </nav>
-        
-        
-        
-        
         </div>
       </div>
     </footer>

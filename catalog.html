@@ -20,19 +20,16 @@
       <div class="wrapper-header-up">
         <ul class="header-up">
           <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
-          <li class="header-up-element">
-            <img class="header-search-img" src="./img/icon/icon_search.png" alt="лупа">
-            <input class="input-search" value="Поиск:">
+          <li class="header-up-element-input">
+            <input class="input-search" placeholder="Поиск:">
           </li>
-          <li class="header-up-element" value=" Закладки:">
-            <img class="header-bookmark-img" src="./img/icon/icon_bookmark.png" alt="закладка">
-             Закладки:&nbsp;
-             <div class="header-bookmark-value">0</div>
+          <li class="header-up-element-bookmarks" value=" Закладки:">
+            Закладки:&nbsp;
+            <div class="header-bookmark-value">0</div>
           </li>
-          <li class="header-up-element">
-            <img class="header-cart-img" src="./img/icon/icon_cart.png" alt="корзина">
-             Корзина:&nbsp;
-             <div class="header-cart-value">0</div>
+          <li class="header-up-element-cart">
+            Корзина:&nbsp;
+            <div class="header-cart-value">0</div>
           </li>
           <li class="button-create-order">
             <a href="#">Оформить заказ</a>
@@ -40,20 +37,18 @@
         </ul>
       </div>
       <div class="wrapper-header-middle">
-        <h1 class="header-middle-element">
+        <h1 class="header-middle-element-left">
           <p class="header-title">
             Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта
           </p>
         </h1>
-        <div class="header-middle-element">
-          <div class="wrapper-header-tel">
-            <a class="input-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </div>
+        <div class="header-middle-element-tel">
+          <a class="input-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="header-middle-element">
+        <div class="header-middle-element-right">
           <button class="button-login">
             <img class="button-login-img" src="./img/icon/icon_login.png" alt="логин">
             Войти
@@ -74,13 +69,14 @@
       </nav>
     </header>
 
-    <main>
-    </main>
+   <main>
+     
+   </main>
 
     <footer>
       <div class="footer-up">
-        <nav>
-          <a href="#">Техномарт</a>
+        <nav class="footer-up-nav-up">
+          <a class="technomart-link-footer" href="#"> ТЕХНОМАРТ</a>
           <ul>
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -89,12 +85,12 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div>
-          г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</br>
-          <!----<input class="input-tel" type="tel" value="+7 (812) 555-05-55">-->
-          <a class="input-tel" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
-        </div>
-        <nav>
+        
+        <nav class="footer-up-nav-down">
+          <address class="footer-up-adress">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</br>
+              <a class="input-tel" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
+          </address>
           <ul>
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
@@ -105,37 +101,37 @@
       </div>
       <div class="wrapper-footer-down">
         <div class="footer-down">
-          <p>&copy 2010-2017 Компания &laquoТехномарт&raquo</br>
+          <div class="footer-down-text">
+            <p>&copy 2010-2017 Компания &laquoТехномарт&raquo</br>
             Все права защищены</p>
+          </div>
           <nav>
-            <ul>
-              <li class="social-network">
-                <a href="#vkontakte" style="color: white">
-                  <img src="./img/icon/icon_vk.png" alt="VK">
-                </a>
-              </li>
-              <li class="social-network">
-                <a href="#facebook" style="color: white">
-                  <img src="./img/icon/icon_fb.png" alt="f">
-                </a>
-              </li>
-              <li class="social-network">
-                <a href="#instagram" style="color: white">
-                  <img src="./img/icon/icon_insta.png" alt="Inst">
-                </a>
-              </li>
-            </ul>
-            <ul>
-              <li>Обратная связь:</li>
-              <li><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-              <li>Разработано -</li>
-              <li><a href="htmlacademy.ru">htmlacademy.ru</a></li>
-            </ul>
+              <ul>
+                <li class="social-network">
+                  <a href="#vkontakte" style="color: white">
+                    <img src="./img/icon/icon_vk.png" alt="VK">
+                  </a>
+                </li>
+                <li class="social-network">
+                  <a href="#facebook" style="color: white">
+                    <img src="./img/icon/icon_fb.png" alt="f">
+                  </a>
+                </li>
+                <li class="social-network">
+                  <a href="#instagram" style="color: white">
+                    <img src="./img/icon/icon_insta.png" alt="Inst">
+                  </a>
+                </li>
+              </ul>
+              <div class="footer-mail-us">
+                Обратная связь:</br>
+                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </div>
+              <div class="footer-our-link">
+                Разработано -</br>
+                <a href="htmlacademy.ru">htmlacademy.ru</a>
+              </div>
           </nav>
-        
-        
-        
-        
         </div>
       </div>
     </footer>

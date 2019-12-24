@@ -10,6 +10,7 @@
 @color-buttonCreateOrder: #63a63e;
 @color-buttonCreateOrderHover: #5fbb2d;
 @color-buttonCreateOrderActive: #518534;
+@color-buttonBuyAfter: #367315;
 @color-textYello: #ffd180;
 @color-textWhite: #ffff;
 @color-textGray: @color-textWhite 70%;
@@ -110,6 +111,7 @@ h1 {
 h2 {
   color: @color-lightBlueGray;
   font: 30px cuprum;
+  line-height: 40px;
 }
 
 .visually-hidden {
@@ -190,36 +192,86 @@ header {
   border: none;
   color: @color-textWhite;
   height: 100%;
-  width: 100%;
+  padding-left: 39px;
+  width: 206px;
 }
 
-.header-up-element,
 .header-up-element-input {
- padding-left: 16px;
- padding-right: 31px;
-}
+  position: relative;
+} 
 
-.header-up-element:hover,
-.header-up-element-input:hover {
+.header-up-element-input:hover,
+.header-up-element-bookmarks:hover,
+.header-up-element-cart:hover {
   background-color: rgba(0, 0, 0, 0.1);
  }
 
- .header-up-element:active {
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 80%;
+.header-up-element-bookmarks:active,
+.header-up-element-cart:active {
+  background-color: #161d29;
+  opacity: 50%;
 }
 
-.header-up-element-input:active {
+.input-search::placeholder {
+  color: @color-textWhite;
+}
+.input-search:focus {
   background-color: @color-textWhite;
+  color: black;
 }
 
-.header-bookmark-img {
-  margin: 0 12px 2px 0;
+.input-search:focus::placeholder {
+  color: black;
 }
 
-.header-cart-img {
-  margin: 0 16px 2px 0;
+.header-up-element-input:before {
+  position: absolute;
+  content: url("./img/icon/icon_search.png");
+  left: 7px;
+  top: 12px;
+  opacity: 30%;
+ }
+
+ .header-up-element-input:focus::before {
+  position: absolute;
+  content: url("./img/icon/icon_search_red.png");
+  left: 7px;
+  top: 12px;
 }
+
+ .header-up-element-bookmarks {
+  position: relative;
+  padding-left: 45px;
+  padding-right: 17px;
+ }
+
+ .header-up-element-bookmarks:before {
+  position: absolute;
+  content: url("./img/icon/icon_bookmark.png");
+  left: 18px;
+  top: 12px;
+  opacity: 30%;
+ }
+
+ .header-up-element-cart {
+  padding-left: 51px;
+  padding-right: 24px;
+  position: relative;
+ }
+
+ .header-up-element-cart:before {
+  position: absolute;
+  content: url("./img/icon/icon_cart.png");
+  left: 21px;
+  top: 12px;
+  opacity: 30%;
+ }
+
+ .header-up-element-input:hover:before,
+ .header-up-element-bookmarks:hover:before,
+ .header-up-element-cart:hover:before {
+  opacity: 100%;
+ }
 
 .button-create-order a {
   font: 17px cuprum;
@@ -384,19 +436,59 @@ main {
 }
 
 .slider {
+  .variable-style-flex-column-space-between;
   min-width: 536px;
   background-image: url('./img/slider/slider_perforator.jpg');
   background-color: #adabaa;
   flex-grow: 1;
   margin-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 21px;
+  padding-bottom: 31px;
+  font: 18px PT sans;
 }
 
 .button-right,
 .button-left,
-.pop-up-map {
+.button-pop-up-map {
   border: medium none;
   background: transparent;
   background-color: transparent;
+  outline: none;
+}
+
+.button-right,
+.button-left {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.slider span {
+  font: bold 36px cuprum;
+
+}
+
+.slider a {
+  text-align: center;
+  border-radius: 3px;
+  font: 14px cuprum;
+  padding: 10px 49px;
+  color: @color-textWhite;
+  background-color: @color-linkTechnomart;
+}
+
+.slider a:hover {
+  background-color: @color-linkTechnomartHover;
+}
+
+.slider a:active{
+  background-color: @color-linkTechnomartActive;
+}
+
+.slider-button {
+  .variable-style-flex-row-space-between;
+  margin-top: -26px;
 }
 
 .button-arround-slider {
@@ -413,6 +505,17 @@ main {
   background-color: rgba(0, 0, 0, 0.1);
   color: @color-textWhite;
   outline: none;
+}
+
+.new {
+  position: absolute;
+  background: @color-linkTechnomart;
+  color: @color-textWhite;
+  padding: 5px 39px;
+  top: 7px;
+  right: -32px;
+  transform: rotate(45deg);
+
 }
 
 .button-arround-slider:hover {
@@ -443,10 +546,12 @@ main {
 .button-discounts,
 .button-delivery {
   .variable-style-flex-column-space-between;
+  overflow: hidden;
+  position: relative;
   padding-left: 25px;
   padding-right: 93px;
-  padding-top: 26px;
-  padding-bottom: 22px;
+  padding-top: 24px;
+  padding-bottom: 19px;
   background-repeat: no-repeat;
   background-position: 95%;
 }
@@ -490,12 +595,14 @@ main {
   margin-top: 21px;
 }
 
+.wrapper-popular-brands {
+  margin-bottom: 85px;
+}
 
 .popular-goods,
 .popular-brands {
   .variable-style-flex-row-space-between;
   background-color: @color-backgroundBeige;
-  height: 89px;
   padding-left: 30px;
   padding-right: 24px;
 }
@@ -534,13 +641,18 @@ main {
 }
 
 .card-item {
-  .variable-style-flex-column-space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
   text-align: center;
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: contain;
-  padding-top: 156px;
+  padding-top: 45px;
   padding-bottom: 20px;
+  height: 320px;
 }
 
 .card-item:nth-child(1) {
@@ -565,6 +677,70 @@ main {
 .card-item h3 {
   font: bold 18px PT Sans;
   line-height: 20px;
+}
+
+.wrapper-card-item-buttons {
+  .variable-style-flex-column-space-between;
+  font: 14px Cuprum;
+  position: absolute;
+  top: 45px;
+}
+
+.button-card-item-buy,
+.button-card-item-addtobookmarks {
+  border-radius: 3px;
+  outline: none;
+  
+}
+
+.button-card-item-buy {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  border-width: 0 0 3px 0;
+  background-color: @color-buttonCreateOrder;
+  border-color: transparent transparent @color-buttonCreateOrder transparent;
+  color: @color-textWhite;
+}
+
+.button-card-item-buy::before {
+  position: absolute;
+  content: url("./img/icon/icon_cart.png");
+  left: 9px;
+  opacity: 30%;
+}
+
+.button-card-item-buy:hover {
+  background-color: @color-buttonCreateOrderHover;
+}
+
+.button-card-item-buy:hover::before {
+  opacity: 100%;
+}
+
+.button-card-item-buy:active {
+  background-color: @color-buttonCreateOrderActive;
+  padding-bottom: 10px;
+  border: none;
+}
+
+.button-card-item-addtobookmarks {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 34px;
+  padding-right: 30px;
+  border: solid 3px @color-buttonCreateOrder;
+  background-color: inherit;
+  color: @color-lightBlueGray;
+}
+
+.button-card-item-addtobookmarks:hover {
+  border: solid 3px @color-lightBlueGray;
+}
+
+.button-card-item-addtobookmarks:active {
+  opacity: 70%;
 }
 
 .new-price {
@@ -653,7 +829,7 @@ main {
 .service {
   background-color: @color-serviceBackgroundLightBlue;
   .variable-style-flex-column-space-between;
-  margin-top: 85px;
+  margin-bottom: 50px;
 }
 
 .service-up {
@@ -733,6 +909,33 @@ main {
   font: bold 28px Cuprum;
 }
 
+.paragraph {
+  padding-bottom: 26px;
+  font: 13px/24px PT Sans;
+}
+
+.delivery-company {
+  position: relative;
+  font: 20px Cuprum;
+  padding-left: 36px;
+  line-height: 33px;
+}
+
+.delivery-company::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 15px;
+  left: 0;
+  height: 2px;
+  width: 25px;
+  background-color: @color-linkTechnomart;
+}
+
+.company-contacts-left :nth-last-child(2) {
+  margin-bottom: 35px;
+}
+
 .company-contacts a {
   text-align: center;
   border-radius: 3px;
@@ -753,6 +956,43 @@ main {
   background-color: @color-linkTechnomartActive;
 }
 
+.company-contacts-right {
+  .variable-style-flex-column-space-between;
+  font: 13px PT Sans;
+}
+
+#pop-up-map {
+  .visually-hidden;
+}
+
+.pop-up-map-section {
+  position: fixed;
+  left: 13%;
+  top: 34%;
+  z-index: 2;
+  margin: auto;
+  width: 74%;
+  height: 58%;
+  display:flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.wrapper-pop-up-map-big {
+  position: relative;
+  max-width: 100%;
+  box-shadow: 0px -2px 19px -3px #060505b5;
+}
+
+.big-map-img {
+  max-width: 100%;
+}
+
+.button-pop-up-map {
+ /* margin-top: 38px;*/
+  margin-bottom: 37px;
+}
+
 .button-write-us {
   text-align: center;
   outline: none;
@@ -767,30 +1007,178 @@ main {
   background-color: @color-linkTechnomart;  
 }
 
-.pop-up-write-us-form {
+.button-write-us:hover {
+  background-color: @color-linkTechnomartHover;
+}
+
+.button-write-us:active {
+  background-color: @color-linkTechnomartActive;
+}
+
+#form-write-us {
   .visually-hidden;
 }
 
+.pop-up-write-us-form {
+  /*.visually-hidden;*/
+  position: fixed;
+  left: 25%;
+  top: 34%;
+  z-index: 2;
+}
+
+.wrapper-write-us-form {
+  /*.visually-hidden;*/
+  background-color: @color-mainBackgroundWhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0px 7px 18px 5px #060505b5;
+  font: 18px Cuprum;
+}
+
+.wrapper-write-us-form::before {
+  background-color: @color-linkTechnomart;
+  position: absolute;
+  content: "";
+  display: block;
+  top: -7px;
+  height: 7px;
+  width: 100%;
+}
+
+.wrapper-pop-up-write-us-up {
+  background-color: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 47px;
+}
+
+.button-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+}
+
+.button-close:hover {
+  opacity: 1;
+}
+
+.button-close:before,
+.button-close:after {
+  position: absolute;
+  left: 0px;
+  content: '';
+  height: 22px;
+  width: 3px;
+}
+
+.button-close:before {
+  transform: rotate(45deg);
+  background-color: @color-linkTechnomart;
+}
+
+.button-close:after {
+  transform: rotate(-45deg);
+  background-color: @color-linkTechnomart;
+}
+
+.pop-up-write-us-up-left,
+.pop-up-write-us-up-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 47%;
+}
+
+.input-pop-up-write-us-name,
+.input-pop-up-write-us-email {
+  width: 100%;
+}
+
+.wrapper-pop-up-write-us-middle {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 22px;
+  padding-bottom: 37px;
+}
+
+.input-pop-up-write-us-text {
+  height: 110px;
+  width: 100%;
+}
+
+.wrapper-pop-up-write-us-down {
+  background-color: @color-backgroundBeige;
+  padding-top: 37px;
+  padding-bottom: 37px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.button-pop-up-write-us-send {
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font: 14px cuprum;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  padding-left: 199px;
+  padding-right: 199px;
+  color: @color-textWhite;
+  background-color: @color-linkTechnomart; 
+}
+
+.button-pop-up-write-us-send:hover {
+  background-color: @color-linkTechnomartHover;
+}
+
+.button-pop-up-write-us-send:active {
+  background-color: @color-linkTechnomartActive;
+}
+
 footer {
-  min-width: 940px;
   background-color: @color-lightBlueGray;
   color: @color-textWhite;
+  margin-top: 87px;
 }
 
 .footer-up {
-  .variable-width-basic;
-  height: 193px;
+  max-width: 940px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.footer-up-nav-up {
+  .variable-style-flex-row-space-between;
+  padding-top: 17px;
 }
 
 .technomart-link-footer {
   position: relative;
   font: 30px cuprum;
-  padding-top: 15px;
+  padding-top: 17px;
+  margin-top: -17px;
   padding-bottom: 12px;
   padding-left: 42px;
   padding-right: 42px;
   background-color: @color-linkTechnomart;
-  @color-linkTechnomartAfter: (@color-linkTechnomart - #390d10);
 }
 
 .technomart-link-footer:hover {
@@ -820,13 +1208,77 @@ footer {
   background-color:  @color-linkTechnomartAfterActive;
 }
 
+.footer-up-nav-up ul {
+  padding-top: 19px;
+  font: 18px Cuprum;
+  width: 65%;
+}
+
+.footer-up li {
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-left: 5px;
+}
+
+.footer-up-nav-link {
+  
+}
+
+.footer-up-nav-down {
+  .variable-style-flex-row-space-between;
+  padding-top: 31px;
+}
+
+.footer-up-adress {
+  font: 18px Cuprum;
+  line-height: 24px;
+  padding-left: 3px;
+  white-space: nowrap;
+}
+
+.footer-up-nav-down ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-left: 33px;
+  padding-bottom: 22px;
+  font: 18px Cuprum;
+  color: @color-textYello;
+}
+
+.footer-up-nav-up ul a:hover,
+.footer-up-nav-down ul a:hover {
+  text-decoration: underline;
+}
+
+.footer-up-nav-up ul a:active,
+.footer-up-nav-down ul a:active {
+  opacity: 70%;
+  text-decoration: none;
+}
+
 .wrapper-footer-down {
   background-color: @color-darkBlueGray;
-  height: 107px;
+  padding-top: 38px;
 }
 
 .footer-down {
+  .variable-style-flex-row-space-between;
   .variable-width-basic;
+  padding-bottom: 15px;
+  font: 16px Cuprum;
+}
+
+.footer-down nav {
+  .variable-style-flex-row-space-between;
+  width: 58%;
+}
+
+.footer-down-text {
+  font: 16px Cuprum;
+  white-space: nowrap;
+  margin-top: -15px;
 }
 
 .social-network {
@@ -834,10 +1286,28 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin-right: 5px;
 }
 
+.social-network:hover {
+  background-color: @color-linkTechnomart;
+}
 
+.footer-mail-us a,
+.footer-our-link a {
+  color: @color-textYello;
+}
 
+.footer-mail-us a:hover,
+.footer-our-link a:hover {
+  text-decoration: underline;
+}
+
+.footer-mail-us a:active,
+.footer-our-link a:active {
+  color: @color-linkTechnomart;
+  text-decoration: none;
+}
 
 
 .test {
