@@ -1,0 +1,784 @@
+/*** стили мэйна ***/
+
+main {
+    background-color: @color-mainBackground;
+  }
+  
+  .wrapper-nav-goods-and-service {
+    .variable-width-basic;
+    .variable-style-flex-column-space-between;
+    padding-top: 59px;
+    padding-bottom: 32px;
+    color: @color-textWhite;
+  }
+  
+  .wrapper-button-goods-and-service-up {
+    .variable-style-flex-row-space-between;
+  }
+  
+  .wrapper-button-goods-and-service-down {
+    .variable-style-flex-row-space-between;
+    margin-top: 20px;
+  }
+  
+  .wrapper-button-goods-and-service-right {
+    .variable-style-flex-column-space-between; 
+  }
+  
+  .slider {
+    .variable-style-flex-column-space-between;
+    min-width: 536px;
+    background-image: url('./img/slider/slider_perforator.jpg');
+    background-color: #adabaa;
+    flex-grow: 1;
+    margin-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 21px;
+    padding-bottom: 31px;
+    font: 18px PT sans;
+  }
+  
+  .button-right,
+  .button-left,
+  .button-pop-up-map {
+    border: medium none;
+    background: transparent;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .button-right,
+  .button-left {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .slider span {
+    font: bold 36px cuprum;
+  }
+  
+  .wrapper-slider-down {
+    .variable-style-flex-row-space-between;
+    width: 53%;
+  }
+  
+  .slider a {
+    text-align: center;
+    border-radius: 3px;
+    .variable-font-14;
+    padding: 10px 49px;
+    color: @color-textWhite;
+    background-color: @color-linkTechnomart;
+  }
+  
+  .slider a:hover {
+    background-color: @color-linkTechnomartHover;
+  }
+  
+  .slider a:active{
+    background-color: @color-linkTechnomartActive;
+  }
+  
+  .slider-button {
+    .variable-style-flex-row-space-between;
+    margin-top: -26px;
+  }
+  
+  .slider-radio {
+    .variable-style-flex-row-space-between;
+  }
+  
+  .slider-left-radio,
+  .slider-right-radio {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @color-mainBackground;
+    border: 2px solid @color-mainBackground;
+    margin: auto;
+  }
+  
+  .slider-left-radio {
+    margin-right: 7px;
+    background-color: @color-linkTechnomart;
+  }
+  
+  .button-arround-slider {
+    white-space: nowrap;
+    width: 135px;
+    margin-top: 12px;
+    margin-right: 5px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    text-align: center;
+    .variable-font-14;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: @color-textWhite;
+    outline: none;
+  }
+  
+  .new {
+    position: absolute;
+    background: @color-linkTechnomart;
+    color: @color-textWhite;
+    padding: 5px 39px;
+    top: 7px;
+    right: -32px;
+    transform: rotate(45deg);
+  }
+  
+  .button-arround-slider:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-arround-slider:active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .wrapper-button-arround-slider-img {
+    display:flex;
+    align-items: center;
+  }
+  
+  .button-arround-slider-text-and-button {
+    .variable-style-flex-column-space-between;
+  }
+  
+  .wrapper-nav-goods-and-service h3 {
+    font: bold 24px cuprum;
+    margin: 0;
+  }
+  
+  .button-materials,
+  .button-instuments,
+  .button-technics,
+  .button-discounts,
+  .button-delivery {
+    .variable-style-flex-column-space-between;
+    overflow: hidden;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 19px;
+    background-repeat: no-repeat;
+    background-position: 95%;
+  }
+  
+  .button-materials {
+    background-color: @color-navSectionMaterials;
+    background-image: url('./img/logo/logo_materials.png');
+    flex-grow: 1;
+    min-width: 165px;
+  }
+  
+  .button-instuments {
+    background-color: @color-navSectionInstruments;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: url('./img/logo/logo_instruments.png');
+    flex-grow: 1;
+    min-width: 165px;
+  }
+  
+  .button-technics {
+    background-color: @color-navSectionTechnics;
+    background-image: url('./img/logo/logo_technics.png');
+    flex-shrink: 0;
+  }
+  
+  .button-discounts {
+    background-color: @color-navSectionDiscounts;
+    background-image: url('./img/logo/logo_discounts.png');
+  }
+  
+  .button-delivery {
+    background-color: @color-navSectionDelivery;
+    background-image: url('./img/logo/logo_delivery.png');
+    margin-top: 20px;
+  }
+  
+  .wrapper-popular-goods,
+  .wrapper-popular-brands {
+    .variable-width-basic;
+    .variable-style-flex-column-space-between;
+    margin-top: 21px;
+  }
+  
+  .wrapper-popular-brands {
+    margin-bottom: 85px;
+  }
+  
+  .popular-goods,
+  .popular-brands {
+    .variable-style-flex-row-space-between;
+    background-color: @color-popularGoodsBrandsBackground;
+    padding-left: 30px;
+    padding-right: 24px;
+  }
+  
+  .popular-goods h3 {
+    color: black;
+    font: bold 18px PT Sans;
+  }
+  
+  .popular-goods a,
+  .popular-brands a{
+    text-align: center;
+    border-radius: 3px;
+    min-width: 253px;
+    .variable-font-14;
+    margin-top: 27px;
+    margin-bottom: 24px;
+    padding-top: 11px;
+    color: @color-textWhite;
+    background-color: @color-linkTechnomart;
+  }
+  
+  .popular-goods a:hover,
+  .popular-brands a:hover{
+    background-color: @color-linkTechnomartHover;
+  }
+  
+  .popular-goods a:active,
+  .popular-brands a:active{
+    background-color: @color-linkTechnomartActive;
+  }
+  
+  .card {
+    .variable-style-flex-row-space-between;
+    flex-wrap: wrap;
+  }
+  
+  .card-item {
+    .variable-style-flex-column-flex-end;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    min-height: 248px;
+  }
+  
+  .card-item:nth-child(1) {
+    background-image: url('./img/goods/goods_Bosch BFG 9000.jpg');
+  }
+  
+  .card-item:nth-child(2) {
+    background-image: url('./img/goods/goods_Bosch BFG 3000.jpg');
+  }
+  
+  .card-item:nth-child(3) {
+    background-image: url('./img/goods/goods_Bosch BFG 6000.jpg');
+  }
+  
+  .card-item:nth-child(4) {
+    background-image: url('./img/goods/goods_Bosch BFG 2000.jpg');
+  }
+  
+  .card-item:hover {
+    box-shadow: 0px 7px 13px 5px #a9adb5;
+    background-image: none;
+    .wrapper-card-item-buttons{
+      .variable-style-flex-column-flex-end;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .card-item h3 {
+    font: bold 18px PT Sans;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .wrapper-card-item-buttons {
+    display: none;
+  }
+  
+  .button-card-item-buy,
+  .button-card-item-addtobookmarks {
+    .variable-font-14;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  .button-card-item-buy {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    border-width: 0 0 3px 0;
+    background-color: @color-buttonCreateOrder;
+    border-color:  @color-buttonCreateOrder;
+    color: @color-textWhite;
+  }
+  
+  .button-card-item-buy::before {
+    position: absolute;
+    content: url("./img/icon/icon_cart.png");
+    left: 9px;
+    opacity: 30%;
+  }
+  
+  .button-card-item-buy:hover {
+    background-color: @color-buttonCreateOrderHover;
+  }
+  
+  .button-card-item-buy:hover::before {
+    opacity: 100%;
+  }
+  
+  .button-card-item-buy:active {
+    background-color: @color-buttonCreateOrderActive;
+    padding-bottom: 10px;
+    border: none;
+  }
+  
+  .button-card-item-addtobookmarks {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 34px;
+    padding-right: 30px;
+    border: solid 3px @color-buttonCreateOrder;
+    background-color: inherit;
+    color: @color-lightNavBar;
+  }
+  
+  .button-card-item-addtobookmarks:hover {
+    border: solid 3px @color-lightNavBar;
+  }
+  
+  .button-card-item-addtobookmarks:active {
+    opacity: 60%;
+  }
+  
+  .old-price {
+    height: 30px;
+    font: bold 17px PT Sans;
+    color: #a9a9a9;
+    text-decoration: line-through;
+    line-height: 22px;
+  }
+  
+  .new-price {
+    position: relative;
+    background-color: @color-linkTechnomart;
+    color: @color-textWhite;
+    font: bold 17px PT Sans;
+    border-radius: 3px 0px 0px 3px;
+    padding-left: 35px;
+    padding-right: 23px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: -12px;
+  }
+  
+  .new-price::after {
+    position: absolute;
+    content: '';
+    border: 19px solid transparent;
+    border-left: 20px solid @color-linkTechnomart;
+    right: -39px;
+    top: 0px;
+  }
+  
+  .card-item,
+  .brand {
+    border: 1px solid @color-itemCardBorder;
+    width: 23%;
+    margin-top: 21px;
+  }
+  
+  .brand {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+  }
+  
+  .brand:hover {
+    box-shadow: 0px 7px 13px 5px #a9adb5;
+  }
+  
+  .brand:active {
+    box-shadow: 0px 5px 7px 1px;
+    opacity: 37%;
+  }
+  
+  .brand a {
+    width: 100%;
+    min-height: 145px;
+  }
+  
+  .brand:nth-child(1) {
+    background-image: url('./img/brands/brands_Bosch.png');
+  }
+  
+  .brand:nth-child(2) {
+    background-image: url('./img/brands/brands_Makita.png');
+  }
+  
+  .brand:nth-child(3) {
+    background-image: url('./img/brands/brands_DeWalt.png');
+  }
+  
+  .brand:nth-child(4) {
+    background-image: url('./img/brands/brands_Interscol.png');
+  }
+  
+  .brand:nth-child(5) {
+    background-image: url('./img/brands/brands_Hitachi.png');
+  }
+  
+  .brand:nth-child(6) {
+    background-image: url('./img/brands/brands_LG.png');
+  }
+  
+  .brand:nth-child(7) {
+    background-image: url('./img/brands/brands_AEG.png');
+  }
+  
+  .brand:nth-child(8) {
+    background-image: url('./img/brands/brands_Metabo.png');
+  }
+  
+  .service {
+    background-color: @color-serviceBackground;
+    .variable-style-flex-column-space-between;
+    margin-bottom: 50px;
+  }
+  
+  .service-up {
+    padding-top: 64px;
+    width: 940px;
+    margin: auto;
+  }
+  
+  .service-up span {
+    font: bold 28px Cuprum;
+  }
+    
+  .service-up p {
+    .variable-font-16;
+    line-height: 25px;
+    margin-top: 25px;
+    
+  }
+  
+  .service-down {
+    .variable-style-flex-row-space-between;
+    width: 940px;
+    margin: auto;
+  }
+  
+  .service-down p {
+    font: 15px Cuprum;
+    line-height: 25px;
+    margin-top: 25px;
+  }
+  
+  .service-down h3 {
+    color: @color-lightNavBar;
+    font: bold 35px cuprum;
+  }
+  
+  .buttons-service {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    background-color: inherit;
+    box-shadow: inset -20px 0px 12px -20px #9c9c9c;
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+  
+  .buttons-service button {
+    border: none;
+    outline: none;
+    font: bold 21px cuprum;
+    color: @color-textWhite;
+    background-color: @color-lightNavBar;
+    padding-left: 23px;
+    padding-right: 140px;
+    padding-top: 19px;
+    padding-bottom: 23px;
+    width: 100%;
+    box-shadow: inset -20px 0px 12px -20px #9c9c9c;
+  }
+  
+  .buttons-service button:hover {
+    color: @color-lightNavBar;
+    background-color: @color-mainBackground;
+  }
+  
+  
+  .buttons-service li:nth-child(2) {
+    border: 1px solid #4d637b;
+    border-width: 1px 0 1px 0;
+  }
+  
+  .service-delivery {
+    flex-grow: 1;
+    background-image: url('./img/background/background_delivery.jpg');
+    padding-left: 80px;
+  }
+  
+  .service-guarantee {
+    background-image: url('./img/background/background_guarantee.jpg');
+  }
+  
+  .service-credit {
+    background-image: url('./img/background/background_loan.jpg');
+  }
+  
+  .service-guarantee,
+  .service-credit {
+    .variable-visually-hidden;
+  }
+  
+  .company-contacts {
+    .variable-width-basic;
+    .variable-style-flex-row-space-between;
+  }
+  
+  .company-contacts h3 {
+    font: bold 28px Cuprum;
+  }
+  
+  .paragraph {
+    padding-bottom: 26px;
+    font: 13px/24px PT Sans;
+  }
+  
+  .delivery-company {
+    position: relative;
+    font: 20px Cuprum;
+    padding-left: 36px;
+    line-height: 33px;
+  }
+  
+  .delivery-company::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 15px;
+    left: 0;
+    height: 2px;
+    width: 25px;
+    background-color: @color-linkTechnomart;
+  }
+  
+  .company-contacts-left :nth-last-child(2) {
+    margin-bottom: 35px;
+  }
+  
+  .company-contacts a {
+    text-align: center;
+    border-radius: 3px;
+    .variable-font-14;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: @color-textWhite;
+    background-color: @color-linkTechnomart;
+  }
+    
+  .company-contacts a:hover {
+    background-color: @color-linkTechnomartHover;
+  }
+  
+  .company-contacts a:active {
+    background-color: @color-linkTechnomartActive;
+  }
+  
+  .company-contacts-right {
+    .variable-style-flex-column-space-between;
+    font: 13px PT Sans;
+  }
+  
+  #pop-up-map {
+    .visually-hidden;
+  }
+  
+  .pop-up-map-section {
+    position: fixed;
+    left: 13%;
+    top: 34%;
+    z-index: 2;
+    margin: auto;
+    width: 74%;
+    height: 58%;
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .wrapper-pop-up-map-big {
+    position: relative;
+    max-width: 100%;
+    box-shadow: 0px -2px 19px -3px #060505b5;
+  }
+  
+  .big-map-img {
+    max-width: 100%;
+  }
+  
+  .button-pop-up-map {
+    margin-bottom: 37px;
+  }
+  
+  .button-write-us {
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    .variable-font-14;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 62px;
+    padding-right: 60px;
+    color: @color-textWhite;
+    background-color: @color-linkTechnomart;  
+  }
+  
+  .button-write-us:hover {
+    background-color: @color-linkTechnomartHover;
+  }
+  
+  .button-write-us:active {
+    background-color: @color-linkTechnomartActive;
+  }
+  
+  #form-write-us {
+    .visually-hidden;
+  }
+  
+  .pop-up-write-us-form {
+    position: fixed;
+    left: 25%;
+    top: 34%;
+    z-index: 2;
+  }
+  
+  .wrapper-write-us-form {
+    .variable-style-flex-column-space-between;
+    background-color: @color-mainBackground;
+    position: relative;
+    box-shadow: 0px 7px 18px 5px #060505b5;
+    .variable-font-18;
+  }
+  
+  .wrapper-write-us-form::before {
+    background-color: @color-linkTechnomart;
+    position: absolute;
+    content: "";
+    display: block;
+    top: -7px;
+    height: 7px;
+    width: 100%;
+  }
+  
+  .wrapper-pop-up-write-us-up {
+    .variable-style-flex-row-space-between;
+    background-color: inherit;
+    flex-wrap: wrap;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 47px;
+  }
+  
+  .button-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+  }
+  
+  .button-close:hover {
+    opacity: 1;
+  }
+  
+  .button-close:before,
+  .button-close:after {
+    position: absolute;
+    left: 0px;
+    content: '';
+    height: 22px;
+    width: 3px;
+  }
+  
+  .button-close:before {
+    transform: rotate(45deg);
+    background-color: @color-linkTechnomart;
+  }
+  
+  .button-close:after {
+    transform: rotate(-45deg);
+    background-color: @color-linkTechnomart;
+  }
+  
+  .pop-up-write-us-up-left,
+  .pop-up-write-us-up-right {
+    .variable-style-flex-column-space-between;
+    width: 47%;
+  }
+  
+  .input-pop-up-write-us-name,
+  .input-pop-up-write-us-email {
+    width: 100%;
+  }
+  
+  .wrapper-pop-up-write-us-middle {
+    .variable-style-flex-column-space-between;
+    background-color: inherit;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 22px;
+    padding-bottom: 37px;
+  }
+  
+  .input-pop-up-write-us-text {
+    height: 110px;
+    width: 100%;
+  }
+  
+  .wrapper-pop-up-write-us-down {
+    background-color: @color-popularGoodsBrandsBackground;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  .button-pop-up-write-us-send {
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    .variable-font-14;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 199px;
+    padding-right: 199px;
+    color: @color-textWhite;
+    background-color: @color-linkTechnomart; 
+  }
+  
+  .button-pop-up-write-us-send:hover {
+    background-color: @color-linkTechnomartHover;
+  }
+  
+  .button-pop-up-write-us-send:active {
+    background-color: @color-linkTechnomartActive;
+  }

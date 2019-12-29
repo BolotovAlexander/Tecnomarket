@@ -1,0 +1,288 @@
+/*** стили хидера ***/
+
+header {
+    .variable-style-flex-column-space-between;
+    background-color: @color-headerBackground;
+    color: @color-textWhite;
+    margin: 0;
+    padding-bottom: 64px;
+    min-width: 940px;
+  }
+  
+  .wrapper-header-up {
+    background-color: @color-darkNavBar;
+  }
+  
+  .header-up {
+   .variable-width-basic;
+   .variable-style-flex-row-space-between;
+   .variable-font-17;
+  }
+  
+  .technomart-link a {
+    position: relative;
+    font: 24px cuprum;
+    padding-top: 9px;
+    padding-bottom: 5px;
+    padding-left: 55px;
+    padding-right: 55px;
+    background-color: @color-linkTechnomart;
+    @color-linkTechnomartAfter: (@color-linkTechnomart - #390d10);
+  }
+  
+  .technomart-link a:hover {
+    background-color: @color-linkTechnomartHover;
+  }
+  
+  .technomart-link a:active {
+    background-color: @color-linkTechnomartActive;
+  }
+  
+  .technomart-link a::after {
+    background-color:  @color-linkTechnomartAfter;
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0px;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+  }
+  
+  .technomart-link a:hover::after {
+    background-color:  @color-linkTechnomartAfterHover;
+  }
+  
+  .technomart-link a:active::after {
+    background-color:  @color-linkTechnomartAfterActive;
+  }
+  
+  .header-search {
+    .variable-style-flex-row-start;
+    padding-left: 17px;
+    padding-right: 86px;
+  }
+  
+  .header-search-img {
+    padding-right: 14px;
+  }
+  
+  .label-search {
+  cursor: pointer;
+  }
+  
+  .label-search:before {
+    position: absolute;
+    content: url("./img/icon/icon_search.png");
+    left: 7px;
+    top: 12px;
+    opacity: 30%;
+    z-index: 2;
+  }
+  
+  
+  .input-search {
+    background-color: inherit;
+    outline: none;
+    border: none;
+    color: @color-textWhite;
+    padding-left: 39px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 206px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .header-up-element-input {
+    position: relative;
+  }
+  
+  .header-up-element-input:hover,
+  .header-up-element-bookmarks:hover,
+  .header-up-element-cart:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+   }
+  
+  .header-up-element-bookmarks:active,
+  .header-up-element-cart:active {
+    background-color: #161d29;
+    opacity: 50%;
+  }
+  
+  .input-search::placeholder {
+    color: @color-textWhite;
+  }
+  .input-search:focus {
+    background-color: @color-textWhite;
+    color: black;
+  }
+  
+  .input-search:hover +:before {
+    opacity: 1;
+  }
+  
+  .input-search:focus +:before {
+    content: url("./img/icon/icon_search_red.png");
+    opacity: 1;
+  }
+  
+  .input-search:focus::placeholder {
+    color: black;
+  }
+  
+  .header-up-element-bookmarks {
+    position: relative;
+    padding-left: 45px;
+    padding-right: 17px;
+   }
+  
+   .header-up-element-bookmarks:before {
+    position: absolute;
+    content: url("./img/icon/icon_bookmark.png");
+    left: 18px;
+    top: 12px;
+    opacity: 30%;
+   }
+  
+   .header-up-element-cart {
+    padding-left: 51px;
+    padding-right: 24px;
+    position: relative;
+   }
+  
+   .header-up-element-cart:before {
+    position: absolute;
+    content: url("./img/icon/icon_cart.png");
+    left: 21px;
+    top: 12px;
+    opacity: 30%;
+   }
+  
+   .input-search:hover:before,
+   .header-up-element-bookmarks:hover:before,
+   .header-up-element-cart:hover:before {
+    opacity: 100%;
+   }
+  
+  .button-create-order a {
+    .variable-font-17;
+    padding: 11px 23px 11px 19px;
+    color: #ffff;
+    background-color: @color-buttonCreateOrder;
+    white-space: nowrap;
+  }
+  
+  .button-create-order a:hover {
+    background-color: @color-buttonCreateOrderHover;
+  }
+  
+  .button-create-order a:active {
+    background-color: @color-buttonCreateOrderActive;
+    opacity: 80%;
+  }
+  
+  .wrapper-header-middle {
+    .variable-style-flex-row-space-between;
+    padding-top: 46px;
+    padding-bottom: 43px;
+    padding-left: 55px;
+    margin: auto;
+  }
+  
+  .header-title {
+    margin: 0;
+    line-height: 147%;
+  }
+  
+  .header-middle-element-tel {
+    .variable-style-flex-column-space-between;
+    text-align: center;
+  }
+  
+  .header-middle-element-tel a {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    border: 3px solid @color-textWhite;
+    color: @color-linkTechnomart;
+    background-image: url('./img/icon/icon_phone.png');
+    background-repeat: no-repeat;
+    background-position: 15px;
+    font: 21px cuprum;
+  }
+  
+  .header-adress {
+    color: @color-lightNavBar;
+    .variable-font-14;
+    text-align: center;
+    margin: 0;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  
+  .header-middle-element-left {
+    margin-right: 66px;
+  }
+  
+  .header-middle-element-right {
+    .variable-style-flex-row-space-between;
+    padding-bottom: 24px;
+    margin-left: 73px;
+  }
+  
+  .button-login {
+    .variable-header-button-login-registration;
+    display: inline-flex;
+    padding-left: 14px;
+    padding-right: 27px;
+  }
+  
+  .button-login-img {
+    padding-top: 3px;
+    padding-right: 7px;
+  }
+  
+  .button-registration {
+    .variable-header-button-login-registration;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 10px;
+    justify-content: center;
+  }
+  
+  .header-nav-down {
+    position: relative;
+    width: 940px;
+    margin: auto;
+  }
+  
+  .link-header-nav {
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    background-color: @color-lightNavBar;
+  }
+  
+  .link-header-nav a {
+    flex-grow: inherit;
+    .variable-font-17;
+    padding: 19px 0 17px 0;
+    color: @color-textWhite;
+    
+    border: 5px solid;
+    border-width: 0 0 5px 0;
+    border-color: @color-darkNavBar;
+  }
+  
+  .link-header-nav a:hover {
+    background-color: @color-darkNavBar;
+  }
+  
+  .link-header-nav a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 80%;
+    border-color: @color-darkNavBarBefore;
+  }

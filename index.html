@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Technomart</title>
-    <link href='fonts/Cuprum' rel='stylesheet' type='text/css'>
-    <link href='fonts/PTSans' rel='stylesheet' type='text/css'>
+    <link href='fonts/Cuprum' rel='stylesheet' type='text/css'/>
+    <link href='fonts/PTSans' rel='stylesheet' type='text/css'/>
     <link href="normalize.css" rel="stylesheet" />
     <link href="style.less" type="text/css" rel="stylesheet/less" />
     <script src="./node_modules/less/dist/less.min.js" type="text/javascript"></script>
@@ -21,7 +21,8 @@
         <ul class="header-up">
           <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
           <li class="header-up-element-input">
-            <input class="input-search" placeholder="Поиск:">
+            <input id="search" class="input-search" placeholder="Поиск:"/>
+            <label for="search" class="label-search"></label>
           </li>
           <li class="header-up-element-bookmarks" value=" Закладки:">
             Закладки:&nbsp;
@@ -98,7 +99,7 @@
             <button class="button-left"><img src="./img/icon/icon_left.png" alt="стрелка влево"></button>
             <button class="button-right"><img src="./img/icon/icon_right.png" alt="стрелка вправо"></button>
           </div>
-          <div>
+          <div class="wrapper-slider-down">
             <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
             <div class="slider-radio">
               <div class="slider-left-radio"></div>
@@ -131,7 +132,7 @@
               <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
             </div>
             <h3>Перфоратор BOSCH<br>BFG 9000</h3>
-            <span class="old-price">32500 P.</span>
+            <div class="old-price">32500 P.</div>
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
@@ -140,7 +141,7 @@
               <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
             </div>
             <h3>Перфоратор BOSCH<br>BFG 3000</h3>
-            <span class="old-price">22500 P.</span>
+            <div class="old-price">22500 P.</div>
             <div class="new-price">15500 P.</div>
           </li>
           <li class="card-item">
@@ -149,7 +150,7 @@
               <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
             </div>
             <h3>Перфоратор BOSCH<br>BFG 6000</h3>
-            <span class="old-price">30500 P.</span>
+            <div class="old-price">30500 P.</div>
             <div class="new-price">25500 P.</div>
           </li>
           <li class="card-item">
@@ -158,7 +159,7 @@
               <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
             </div>
             <h3>Перфоратор BOSCH<br>BFG 2000</h3>
-            <span class="old-price"></span>
+            <div class="old-price"></div>
             <div class="new-price">12500 P.</div>
             <div class="new">new</div>
           </li>
@@ -215,7 +216,6 @@
               <li><button class="button-service-guarantee">Гарантия</button></li>
               <li><button class="button-service-credit">Кредит</button></li>
             </ul>
-            <img src="./img/background/background_separator.png"> 
             <div class="service-delivery">
                 <h3>ДОСТАВКА</h3>
                 <p>
@@ -279,8 +279,7 @@
           <div class="wrapper-write-us-form">
             <div class="wrapper-pop-up-write-us-up">
               <button id="button-pop-up-write-us-form-close" class="button-close"
-               onclick="
-               document.body.querySelector('pop-up-write-us-form').style.display = 'none'" 
+               onclick="" 
                value="Закрыть форму отправки сообщения"></button>
               <div class="pop-up-write-us-up-left">
                 Ваше имя:
@@ -304,6 +303,7 @@
     </main>
 
     <footer>
+      <!--<div class="test"><img class="button-login-img" src="./img/background/big map2.jpg" alt="логин"></div>-->
       <div class="footer-up">
         <nav class="footer-up-nav-up">
           <a class="technomart-link-footer" href="#"> ТЕХНОМАРТ</a>
