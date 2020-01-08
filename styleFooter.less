@@ -1,154 +1,152 @@
 /*** стили футера ***/
 
 footer {
-    background-color: @color-lightNavBar;
-    color: @color-textWhite;
-    margin-top: 87px;
-  }
-  
-  .footer-up {
-    max-width: 940px;
-    margin: auto;
-    padding-bottom: 50px;
-  }
-  
-  .footer-up-nav-up {
-    .variable-style-flex-row-space-between;
-    padding-top: 17px;
-  }
-  
-  .technomart-link-footer {
-    position: relative;
-    font: 30px cuprum;
-    padding-top: 17px;
-    margin-top: -17px;
-    padding-bottom: 12px;
-    padding-left: 42px;
-    padding-right: 42px;
-    background-color: @color-linkTechnomart;
-  }
-  
-  .technomart-link-footer:hover {
-    background-color: @color-linkTechnomartHover;
-  }
-  
-  .technomart-link-footer:active {
-    background-color: @color-linkTechnomartActive;
-  }
-  
-  .technomart-link-footer::after {
-    background-color:  @color-linkTechnomartAfter;
-    position: absolute;
-    content: "";
-    display: block;
-    left: 0px;
-    bottom: -5px;
-    width: 100%;
-    height: 5px;
-  }
-  
-  .technomart-link-footer:hover::after {
-    background-color:  @color-linkTechnomartAfterHover;
-  }
-  
-  .technomart-link-footer:active::after {
-    background-color:  @color-linkTechnomartAfterActive;
-  }
-  
-  .footer-up-nav-up ul {
-    padding-top: 19px;
-    .variable-font-18;
-    width: 65%;
-  }
-  
-  .footer-up li {
-    .variable-style-flex-column-flex-end;
-    flex-grow: 1;
-    padding-left: 5px;
-  }
-  
-  .footer-up-nav-down {
-    .variable-style-flex-row-space-between;
-    padding-top: 31px;
-  }
-  
-  .footer-up-adress {
-    .variable-font-18;
-    line-height: 24px;
-    padding-left: 3px;
-    white-space: nowrap;
-  }
-  
-  .footer-up-nav-down ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-grow: 1;
-    padding-left: 33px;
-    padding-bottom: 22px;
-    .variable-font-18;
-    color: @color-textYello;
-  }
-  
-  .footer-up-nav-up ul a:hover,
-  .footer-up-nav-down ul a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-up-nav-up ul a:active,
-  .footer-up-nav-down ul a:active {
-    opacity: 70%;
-    text-decoration: none;
-  }
-  
-  .wrapper-footer-down {
-    background-color: @color-darkNavBar;
-    padding-top: 38px;
-  }
-  
-  .footer-down {
-    .variable-style-flex-row-space-between;
-    .variable-width-basic;
-    padding-bottom: 15px;
-    .variable-font-16;
-  }
-  
-  .footer-down nav {
-    .variable-style-flex-row-space-between;
-    width: 58%;
-  }
-  
-  .footer-down-text {
-    .variable-font-16;
-    white-space: nowrap;
-    margin-top: -15px;
-  }
-  
-  .social-network {
-    background-color: @color-deepDarkNavBar;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
-  
-  .social-network:hover {
-    background-color: @color-linkTechnomart;
-  }
-  
-  .footer-mail-us a,
-  .footer-our-link a {
-    color: @color-textYello;
-  }
-  
-  .footer-mail-us a:hover,
-  .footer-our-link a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-mail-us a:active,
-  .footer-our-link a:active {
-    color: @color-linkTechnomart;
-    text-decoration: none;
-  }
-  
+  background-color: @color-lightNavBar;
+  color: @color-textWhite;
+  margin-top: 87px;
+}
+
+.footer-up {
+  .variable-width-basic;
+  padding-bottom: 50px;
+}
+
+.footer-up-nav-up {
+  .variable-style-flex-row-space-between;
+  padding-top: 17px;
+}
+
+.technomart-link-footer {
+  position: relative;
+  font: 30px cuprum;
+  padding-top: 17px;
+  margin-top: -17px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  padding-right: 42px;
+  background-color: @color-linkTechnomart;
+}
+
+.technomart-link-footer:hover {
+  background-color: @color-linkTechnomartHover;
+}
+
+.technomart-link-footer:active {
+  background-color: @color-linkTechnomartActive;
+}
+
+.technomart-link-footer::after {
+  background-color: @color-linkTechnomartAfter;
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0px;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+}
+
+.technomart-link-footer:hover::after {
+  background-color: @color-linkTechnomartAfterHover;
+}
+
+.technomart-link-footer:active::after {
+  background-color: @color-linkTechnomartAfterActive;
+}
+
+.footer-up-nav-up ul {
+  padding-top: 19px;
+  .variable-font-18;
+  width: 65%;
+}
+
+.footer-up li {
+  .variable-style-flex-column-flex-end;
+  flex-grow: 1;
+  padding-left: 5px;
+}
+
+.footer-up-nav-down {
+  .variable-style-flex-row-space-between;
+  padding-top: 31px;
+}
+
+.footer-up-adress {
+  .variable-font-18;
+  line-height: 24px;
+  padding-left: 3px;
+  white-space: nowrap;
+}
+
+.footer-up-nav-down ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-left: 33px;
+  padding-bottom: 22px;
+  .variable-font-18;
+  color: @color-textYello;
+}
+
+.footer-up-nav-up ul a:hover,
+.footer-up-nav-down ul a:hover {
+  text-decoration: underline;
+}
+
+.footer-up-nav-up ul a:active,
+.footer-up-nav-down ul a:active {
+  opacity: 70%;
+  text-decoration: none;
+}
+
+.wrapper-footer-down {
+  background-color: @color-darkNavBar;
+  padding-top: 38px;
+}
+
+.footer-down {
+  .variable-style-flex-row-space-between;
+  .variable-width-basic;
+  padding-bottom: 15px;
+  .variable-font-16;
+}
+
+.footer-down nav {
+  .variable-style-flex-row-space-between;
+  width: 58%;
+}
+
+.footer-down-text {
+  .variable-font-16;
+  white-space: nowrap;
+  margin-top: -15px;
+}
+
+.social-network {
+  background-color: @color-deepDarkNavBar;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.social-network:hover {
+  background-color: @color-linkTechnomart;
+}
+
+.footer-mail-us a,
+.footer-our-link a {
+  color: @color-textYello;
+}
+
+.footer-mail-us a:hover,
+.footer-our-link a:hover {
+  text-decoration: underline;
+}
+
+.footer-mail-us a:active,
+.footer-our-link a:active {
+  color: @color-linkTechnomart;
+  text-decoration: none;
+}
