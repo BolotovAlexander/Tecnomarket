@@ -1,0 +1,139 @@
+/*** styles of main catalog ***/
+
+.wrapper-main-catalog-up {
+  .variable-width-basic;
+  .variable-style-flex-row-space-between;
+  flex-wrap: wrap;
+}
+
+.main-header-nav {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.main-header-nav ul {
+  .variable-style-flex-row-space-between;
+}
+
+.main-header-nav ul li {
+  padding-right: 15px;
+  font: 13px Pt Sans;
+}
+
+.delimiter-right-arrow {
+  position: relative;
+}
+
+.delimiter-right-arrow:before,
+.delimiter-right-arrow:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0px;
+  width: 1px;
+  height: 9px;
+  background-color: @color-textGray;
+  opacity: 50%;
+}
+
+.delimiter-right-arrow:before {
+  bottom: 1px;
+  transform: rotate(45deg);
+}
+
+.delimiter-right-arrow:after {
+  top: 1px;
+  transform: rotate(-45deg);
+}
+
+.main-catalog-heading {
+  font: 30px Cuprum;
+  color: @color-lightNavBar;
+  background-color: @color-headerBackground;
+  padding-left: 30px;
+  line-height: 80px;
+  width: 100%;
+  margin: 0;
+}
+
+.main-catalog-form {
+  width: 22%;
+}
+
+.main-catalog-form h2 {
+  font: 13px Pt Sans;
+  line-height: 38px;
+  background-color: @color-mainCatalogNav;
+  border-radius: 3px;
+  padding-left: 18px;
+}
+
+.main-catalog-form h3 {
+  font: bold 17px Pt Sans;
+}
+
+.div-separator {
+  width: 100%;
+  border: solid @color-itemCardBorder;
+  border-width: 0 0 1px 0;
+}
+
+.wrapper-main-catalog-cards {
+  width: 70%;
+  padding-left: 18px;
+}
+
+.main-catalog-cards-nav-top {
+  line-height: 38px;
+  background-color: @color-mainCatalogNav;
+  border-radius: 3px;
+}
+
+.wrapper-main-catalog-cards h2 {
+  font: 13px Pt Sans;
+  line-height: 38px;
+}
+
+.wrapper-main-catalog-cards .card-item {
+  width: 30%;
+}
+
+.main-catalog-cards-nav-down {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.main-catalog-cards-nav-down a {
+  background-color: inherit;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border: 1px solid @color-itemCardBorder;
+  border-radius: 3px;
+  
+}
+
+.wrapper-main-catalog-down {
+  background-color: @color-headerBackground;
+  width: 100%;
+  padding-top: 53px;
+  padding-bottom: 70px;
+}
+
+.main-catalog-down {
+  .variable-width-basic;
+}
+
+.main-catalog-down h3 {
+  font: 30px Cuprum;
+  color: black;
+  margin: 0;
+}
+
+.main-catalog-down p {
+  .variable-font-14;
+  color: black;
+  margin: 0;
+  padding-top: 13px;
+}

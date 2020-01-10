@@ -1,18 +1,18 @@
-/*** основные переменные для всей страницы ***/
+/*** basic variables for all page ***/
 
-@color-lightNavBar: #32425c;   /* основной цвет */
+@color-lightNavBar: #32425c;   /* basic color */
 @color-darkNavBar: (@color-lightNavBar - #090e13);
 @color-deepDarkNavBar: (@color-lightNavBar - #111822);
 @color-darkNavBarBefore: (@color-lightNavBar - #1c2638);
 
-@color-linkTechnomart: #ee3643; /* основной цвет */
+@color-linkTechnomart: #ee3643; /* basic color */
 @color-linkTechnomartHover: (@color-linkTechnomart - #240a0c);
 @color-linkTechnomartActive: (@color-linkTechnomart - #340f11);
 @color-linkTechnomartAfter: (@color-linkTechnomart - #390d10);
 @color-linkTechnomartAfterHover: (@color-linkTechnomartHover - #390d10);
 @color-linkTechnomartAfterActive: (@color-linkTechnomartActive - #390d10);
 
-@color-buttonCreateOrder: #60a944; /* основной цвет */
+@color-buttonCreateOrder: #60a944; /* basic color */
 @color-buttonCreateOrderHover: (@color-buttonCreateOrder + rgb(27, 37, 10));
 @color-buttonCreateOrderActive:(@color-buttonCreateOrder - #0f2410);
 @color-buttonBuyAfter: (@color-buttonCreateOrder - #2a362f);
@@ -28,15 +28,16 @@
 @color-headerBackground: #f3f7f9;
 @color-mainBackground: #ffffff;
 @color-serviceBackground: #f4f8f9;
+@color-mainCatalogNav: #f7f3ec;
 
-/*** цвета карточек вокруг слайдера ***/
+/*** colors of cards around the slider ***/
 @color-navSectionMaterials: #ffbf47;
 @color-navSectionDelivery: #ffc047;
 @color-navSectionInstruments: #3bbce3;
 @color-navSectionTechnics: #dc91d8;
 @color-navSectionDiscounts: #8ed78f;
 
-/*** основные шрифты ***/
+/*** basic fonts***/
 .variable-font-14() {
  font: 14px Cuprum;
 }
@@ -53,7 +54,7 @@
   font: 18px Cuprum;
 }
 
-/*** миксины и основные настройки стилей ***/
+/*** mixins and basic style settings ***/
 .variable-width-basic() {
   min-width: 830px;
   max-width: 940px;
@@ -146,11 +147,11 @@ h2 {
 }
 
 
-/*** структура страницы, подключение стилей элементов ***/
+/*** page structure, import of component styles ***/
 
 @import "styleHeader.less";
 
-@import "styleMain.less";
+@import "styleMainIndex.less";
 
 @import "styleFooter.less";
 
