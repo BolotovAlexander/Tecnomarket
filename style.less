@@ -22,7 +22,8 @@
 @color-textWhite: #ffff;
 @color-textGray: gray;
 
-@color-itemCardBorder: #eaeaea;
+@color-itemCardBorder: #eaeaea; /* basic color */
+@color-logoGray: @color-itemCardBorder - #3b3b3b;
 
 @color-popularGoodsBrandsBackground: #f9f5f0;
 @color-headerBackground: #f3f7f9;
@@ -147,31 +148,10 @@ h2 {
 }
 
 
-/*** page structure, import of component styles ***/
+/*** page structure, import of components styles ***/
 
 @import "styleHeader.less";
 
 @import "styleMainIndex.less";
 
 @import "styleFooter.less";
-
-
-
-
-
-
-
-
-
-/*
-.test {
-  width: 830px;
-  height: 322px;
-  background-color: #ffbf47;
-  color: white
-}
-
-.test img {
-  filter: hue-rotate(66deg) brightness(0.3);
-}
-*/
