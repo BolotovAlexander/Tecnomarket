@@ -19,7 +19,7 @@
     <header>
       <div class="wrapper-header-up">
         <ul class="header-up">
-          <li class="technomart-link"><a href="index.html">ТЕХНОМАРТ</a></li>
+          <li class="technomart-link"><a id="technomart-link-up" >ТЕХНОМАРТ</a></li>
           <li class="header-up-element-input">
             <input id="search" class="input-search" placeholder="Поиск:"/>
             <label for="search" class="label-search"></label>
@@ -49,14 +49,14 @@
           <a class="input-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="header-middle-element-right">
+        <div id="id-header-middle-element-right" class="header-middle-element-right">
           <button class="button-login">
             <img class="button-login-img" src="./img/icon/icon_login.png" alt="логин">
             Войти
           </button>
           <button class="button-registration">Регистрация</button>
         </div>
-        <div class="header-middle-element-right-form">
+        <div id="id-header-middle-element-right-form" class="header-middle-element-right-form">
           <input id="login" class="header-middle-element-right-input" placeholder="Логин"/>
           <label for="login" class="label-header-middle-element-right-input"></label>
           <ul>
@@ -79,7 +79,7 @@
       </nav>
     </header>
 
-    <main class="main-index">
+    <main id="main-index">
       <section class="wrapper-nav-goods-and-service">
         <h2 class="visually-hidden">Навигация по товарам и услугам</h2>
         <div class="wrapper-button-goods-and-service-up">
@@ -99,17 +99,17 @@
         </div>
 
         <div  class="wrapper-button-goods-and-service-down">
-          <div class="slider">
-          <div>
-            <span>ПЕРФОРАТОРЫ</span></br>
-            Настоящие мужские игрушки
+          <div id="slider-main" class="slider">
+          <div class="slider-text-div">
+            <span></span>
+            <p></p>
           </div>
           <div class="slider-button">
-            <button class="button-left"><img src="./img/icon/icon_left.png" alt="стрелка влево"></button>
-            <button class="button-right"><img src="./img/icon/icon_right.png" alt="стрелка вправо"></button>
+            <button class="slider-button-left"><img src="./img/icon/icon_left.png" alt="стрелка влево"></button>
+            <button class="slider-button-right"><img src="./img/icon/icon_right.png" alt="стрелка вправо"></button>
           </div>
           <div class="wrapper-slider-down">
-            <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+            <a id="slider-open-catalog">ОТКРЫТЬ КАТАЛОГ</a>
             <div class="slider-radio">
               <div class="slider-left-radio"></div>
               <div class="slider-right-radio"></div>
@@ -280,16 +280,14 @@
         <section id="pop-up-map" class="pop-up-map-section">
           <div class="wrapper-pop-up-map-big">
             <img class="big-map-img" src="./img/background/big map2.jpg" alt="большая карта">
-            <button id="button-pop-up-big-map-close" class="button-close" onclick=""></button>
+            <button id="button-pop-up-big-map-close" class="button-close" value="Закрыть большую карту"></button>
          </div>
           
         </section>
         <form id="form-write-us" class="pop-up-write-us-form">
           <div class="wrapper-write-us-form">
             <div class="wrapper-pop-up-write-us-up">
-              <button id="button-pop-up-write-us-form-close" class="button-close"
-               onclick="" 
-               value="Закрыть форму отправки сообщения"></button>
+              <button id="button-pop-up-write-us-form-close" class="button-close" value="Закрыть форму отправки сообщения"></button>
               <div class="pop-up-write-us-up-left">
                 Ваше имя:
                 <input class="input-pop-up-write-us-name" id="name" placeholder="Представьтесь, пожалуйста">
@@ -311,11 +309,196 @@
       </div>
     </main>
 
+    <main  id="main-catalog">
+      <section class="wrapper-main-catalog-up">
+        <nav class="main-header-nav">
+          <ul>
+            <li><a href><img src="./img/icon/icon_home.png"></a></li>
+            <li class="delimiter-right-arrow"></li>
+            <li><a href>КАТАЛОГ</a></li>
+            <li class="delimiter-right-arrow"></li>
+            <li><a href>ИНСТРУМЕНТ</a></li>
+            <li class="delimiter-right-arrow"></li>
+            <li><a href>ПЕРФОРАТОРЫ</a></li>
+          </ul>
+        </nav>
+        <h2 class="main-catalog-heading">ПЕРФОРАТОРЫ</h2>
+        
+        <form class="main-catalog-form">
+          <div><h2>ФИЛЬТР:</h2></div>
+          <div>
+           <h3>ЦЕНА:</h3>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div class="div-separator"></div>
+         </div>
+         <div>
+           <h3>ПРОИЗВОДИТЕЛИ:</h3>
+           <ul>
+           <li>
+             <div class="a"></div>
+             <div>BOSCH</div>
+            </li>
+           <li>
+             <div class="a1"></div>
+             <div>ИНТЕРСКОЛ</div>
+            </li>
+           <li>
+             <div class="a"></div>
+             <div>MAKITA</div>
+            </li>
+           <li>
+             <div class="a1"></div>
+             <div>DEWALT</div>
+            </li>
+           <li>
+             <div class="a1"></div>
+             <div>HITACHI</div>
+            </li>
+           <li><div class="div-separator"></div></li>
+           </ul>
+         </div>
+         <div>
+           <h3>ПИТАНИЕ:</h3>
+           <ul>
+              <li>
+                <div class="b"></div>
+                <div>АККУМУЛЯТОРНЫЕ</div>
+              </li>
+              <li>
+                <div class="b"></div>
+                <div>СЕТЕВЫЕ</div>
+              </li>
+              <li><input type="checkbox" name="option4" value="a4">Проверка</li>
+            </ul>
+         </div>
+         <button>ПОКАЗАТЬ</button>
+        </form>
+        <article class="wrapper-main-catalog-cards">
+        <nav class="main-catalog-cards-nav-top">
+           <h2>СОРТИРОВКА:</h2>
+           <button class="catalog-cards-nav-top-price">ПО ЦЕНЕ</button>
+           <button class="catalog-cards-nav-top-type">ПО ТИПУ</button>
+           <button class="catalog-cards-nav-top-function">ПО ФУНКЦИОНАЛУ</button>
+           <div class="wrapper-catalog-cards-nav-top-buttons">
+              <button class="nav-top-button-up"></button>
+              <button class="nav-top-button-down"></button>
+           </div>
+        </nav>
+        <div class="wrapper-cart">
+           <ul class="card">
+               <li class="card-item">
+                 <div class="wrapper-card-item-buttons">
+                   <button class="button-card-item-buy">КУПИТЬ</button>
+                   <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                 </div>
+                 <h3>Перфоратор BOSCH<br>BFG 9000</h3>
+                 <div class="old-price">32500 P.</div>
+                 <div class="new-price">25500 P.</div>
+               </li>
+               <li class="card-item">
+                 <div class="wrapper-card-item-buttons">
+                   <button class="button-card-item-buy">КУПИТЬ</button>
+                   <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                 </div>
+                 <h3>Перфоратор BOSCH<br>BFG 3000</h3>
+                 <div class="old-price">22500 P.</div>
+                 <div class="new-price">15500 P.</div>
+               </li>
+               <li class="card-item">
+                 <div class="wrapper-card-item-buttons">
+                   <button class="button-card-item-buy">КУПИТЬ</button>
+                   <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                 </div>
+                 <h3>Перфоратор BOSCH<br>BFG 6000</h3>
+                 <div class="old-price">30500 P.</div>
+                 <div class="new-price">25500 P.</div>
+               </li>
+               <li class="card-item">
+                 <div class="wrapper-card-item-buttons">
+                   <button class="button-card-item-buy">КУПИТЬ</button>
+                   <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                 </div>
+                 <h3>Перфоратор BOSCH<br>BFG 2000</h3>
+                 <div class="old-price"></div>
+                 <div class="new-price">12500 P.</div>
+                 <div class="new">new</div>
+               </li>
+               <li class="card-item">
+                   <div class="wrapper-card-item-buttons">
+                     <button class="button-card-item-buy">КУПИТЬ</button>
+                     <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                   </div>
+                   <h3>Перфоратор BOSCH<br>BFG 9000</h3>
+                   <div class="old-price">32500 P.</div>
+                   <div class="new-price">25500 P.</div>
+                 </li>
+                 <li class="card-item">
+                   <div class="wrapper-card-item-buttons">
+                     <button class="button-card-item-buy">КУПИТЬ</button>
+                     <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                   </div>
+                   <h3>Перфоратор BOSCH<br>BFG 3000</h3>
+                   <div class="old-price">22500 P.</div>
+                   <div class="new-price">15500 P.</div>
+                 </li>
+                 <li class="card-item">
+                   <div class="wrapper-card-item-buttons">
+                     <button class="button-card-item-buy">КУПИТЬ</button>
+                     <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                   </div>
+                   <h3>Перфоратор BOSCH<br>BFG 6000</h3>
+                   <div class="old-price">30500 P.</div>
+                   <div class="new-price">25500 P.</div>
+                 </li>
+                 <li class="card-item">
+                    <div class="wrapper-card-item-buttons">
+                      <button class="button-card-item-buy">КУПИТЬ</button>
+                      <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                    </div>
+                    <h3>Перфоратор BOSCH<br>BFG 3000</h3>
+                    <div class="old-price">22500 P.</div>
+                    <div class="new-price">15500 P.</div>
+                 </li>
+                 <li class="card-item">
+                   <div class="wrapper-card-item-buttons">
+                     <button class="button-card-item-buy">КУПИТЬ</button>
+                     <button class="button-card-item-addtobookmarks">В ЗАКЛАДКИ</button>
+                   </div>
+                   <h3>Перфоратор BOSCH<br>BFG 2000</h3>
+                   <div class="old-price"></div>
+                   <div class="new-price">12500 P.</div>
+                   <div class="new">new</div>
+                 </li>
+           </ul>
+        </div>
+        <nav class="main-catalog-cards-nav-down">
+           <a href>1</a>
+           <a href>2</a>
+           <a href>3</a>
+           <button>СЛЕДУЮЩАЯ</button>
+        </nav>
+       </article>
+
+      </section>
+      <section class="wrapper-main-catalog-down">
+        <div class="main-catalog-down">
+          <h3>ПАРА СЛОВ О ПЕРФОРАТОРАХ:</h3>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. </br>
+             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповёрта и отбойного молотка.
+             В ассортиментном ряду есть выбор &laquoтрехрежимников&raquo: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
+      </section>
+    </main>
+
     <footer>
       <!--<div class="test"><img class="button-login-img" src="./img/background/big map2.jpg" alt="логин"></div>-->
       <div class="footer-up">
         <nav class="footer-up-nav-up">
-          <a class="technomart-link-footer" href="index.html"> ТЕХНОМАРТ</a>
+          <a id="technomart-link-down" class="technomart-link-footer"> ТЕХНОМАРТ</a>
           <ul>
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
