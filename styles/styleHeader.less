@@ -18,27 +18,31 @@ header {
   .variable-font-17;
 }
 
-.technomart-link a {
+.technomart-link button {
   position: relative;
   font: 24px cuprum;
+  text-transform: uppercase;
   padding-top: 9px;
   padding-bottom: 5px;
   padding-left: 55px;
   padding-right: 55px;
   background-color: @color-linkTechnomart;
   @color-linkTechnomartAfter: (@color-linkTechnomart - #390d10);
+  border: none;
+  color: @color-textWhite;
+  outline: none;
   cursor: pointer;
 }
 
-.technomart-link a:hover {
+.technomart-link button:hover {
   background-color: @color-linkTechnomartHover;
 }
 
-.technomart-link a:active {
+.technomart-link button:active {
   background-color: @color-linkTechnomartActive;
 }
 
-.technomart-link a::after {
+.technomart-link button::after {
   background-color: @color-linkTechnomartAfter;
   position: absolute;
   content: "";
@@ -49,11 +53,11 @@ header {
   height: 5px;
 }
 
-.technomart-link a:hover::after {
+.technomart-link button:hover::after {
   background-color: @color-linkTechnomartAfterHover;
 }
 
-.technomart-link a:active::after {
+.technomart-link button:active::after {
   background-color: @color-linkTechnomartAfterActive;
 }
 

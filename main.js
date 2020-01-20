@@ -1,32 +1,9 @@
+import {sliderArr} from './js_modules/sliderArr.js';
+import {cardGoods} from './js_modules/cardGoods.js';
+import {cardBrands} from './js_modules/cardBrands.js';
+
 window.onload = () => {
 
-const sliderArr = [
-  {
-    name: "perforator",
-    img: "slider_perforator.jpg",
-    heading: "ПЕРФОРАТОРЫ",
-    text: "Настоящие мужские игрушки",
-  },
-  {
-    name: "drill",
-    img: "slider_drill.jpg",
-    heading: "ДРЕЛИ",
-    text: "Соседям на радость!",
-  },
-  {
-    name: "tape",
-    img: "slider_blueTape.png",
-    heading: "СИНЯЯ ИЗОЛЕНТА",
-    text: "Когда остальное бессильно",
-  },
-  {
-    name: "kittens",
-    img: "slider_kittens.jpg",
-    heading: "КОТЯТКИ",
-    text: "Все любят котяток :)",
-  },
-];
- 
 const sliderArrLength = sliderArr.length;
 const mainIndex = document.getElementById('main-index');
 const mainCatalog = document.getElementById('main-catalog');
@@ -55,7 +32,7 @@ sliderMain.style.backgroundImage = sliderMainImageUrl;
 sliderMainTextDivSpan.innerText = sliderArr[0].heading;
 sliderMainTextDivText.innerText = sliderArr[0].text;
 
-let i = 0;
+let sliderIndex = 0;
 
 
 mainCatalog.hidden = true;
@@ -75,6 +52,10 @@ function renderIndexSite() {
   mainCatalog.hidden = true;
   mainIndex.hidden = false;
   sliderOpenCatalogButton.addEventListener("click",renderCatalogSite);
+  document.getElementById('card-Goods-Ul-Catalog').innerHTML = "";
+  // for (let i = 0; i < 4; ++i) { debugger;
+  //   cardGoodsRender (cardGoods[i]);
+  // };
 }
 
 function renderCatalogSite() {
@@ -85,6 +66,7 @@ function renderCatalogSite() {
   mainCatalog.hidden = false;
   technomartLinkUp.addEventListener("click",renderIndexSite);
   technomartLinkDown.addEventListener("click",renderIndexSite);
+  cardGoodsRenderCatalog();
 }
  
 // main slider //
@@ -95,35 +77,37 @@ if (mainIndex.hidden == false) {
 
 
 function renderSlider(sliderArr) {
-  if (mainIndex.hidden) return ;
-  if (i == sliderArrLength) {i = 0};
-  console.info(i);
-  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[i].img + ')';
-  sliderMain.style.backgroundImage = sliderMainImageUrl;
-  sliderMainTextDivSpan.innerText = sliderArr[i].heading;
-  sliderMainTextDivText.innerText = sliderArr[i].text;
-  ++i; 
+  if (mainIndex.hidden) return 
+  if (sliderIndex === sliderArrLength) { 
+    sliderIndex = 0;
+  }   
+  //console.info(sliderIndex);
+  //sliderMainImageUrl = 'url(./img/slider/' + sliderArr[i].img + ')';
+  sliderMain.style.backgroundImage = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
+  sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
+  sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
+  ++sliderIndex; 
 };
 
 sliderButtonLeft.addEventListener("click", iSubtraction);
 sliderButtonRight.addEventListener("click", iAddition);
 
 function iSubtraction(){
-  --i;
-  if (i < 0) {i = 0};
-  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[i].img + ')';
+  --sliderIndex;
+  if (sliderIndex < 0) {sliderIndex = 0};
+  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
   sliderMain.style.backgroundImage = sliderMainImageUrl;
-  sliderMainTextDivSpan.innerText = sliderArr[i].heading;
-  sliderMainTextDivText.innerText = sliderArr[i].text;
+  sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
+  sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
 }
 
 function iAddition(){
-  ++i;
-  if (i >= sliderArrLength) {i = sliderArrLength - 1};
-  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[i].img + ')';
+  ++sliderIndex;
+  if (sliderIndex >= sliderArrLength) {sliderIndex = sliderArrLength - 1};
+  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
   sliderMain.style.backgroundImage = sliderMainImageUrl;
-  sliderMainTextDivSpan.innerText = sliderArr[i].heading;
-  sliderMainTextDivText.innerText = sliderArr[i].text;
+  sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
+  sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
 }
 
 
@@ -179,8 +163,56 @@ function closeFormLogin() {
 
 
 
+// Rendering card of Goods //
+
+cardGoodsRenderIndex();
+
+function cardGoodsRenderIndex() { 
+  let wrapperCard = document.getElementById('card-Goods-Ul-Index');
+  for (let i = 0; i < 4; ++i) { 
+    wrapperCard.innerHTML += cardRender(cardGoods[i])
+  }
+}
+
+function cardGoodsRenderCatalog() {
+  let wrapperCard = document.getElementById('card-Goods-Ul-Catalog');
+  for (let i = 0; i < 9; ++i) { 
+    wrapperCard.innerHTML += cardRender(cardGoods[i])
+  }
+}
+
+function cardRender(arr) {
+  return (
+    `<li class="card-item" id="'+ arr.id +'"
+    style="background-image:url('http://127.0.0.1:8080/img/goods/${arr.img}')">
+    <div class="wrapper-card-item-buttons"><button class="button-card-item-buy">купить</button>
+    <button class="button-card-item-addtobookmarks">в закладки</button></div>
+    <h3 class="cardGoodsName">${arr.name}</h3>
+    <h3 class="cardGoodsIdName">${arr.id}</h3>
+    <div class="old-price">${arr.oldPrice}</div>
+    <div class="new-price">${arr.price}</div>
+    <div class="new" style="display:${arr.display}"">new</div></li>`
+  )
+}
 
 
+// Rendering card of Brands //
+
+cardBrandsRenderIndex();
+
+function cardBrandsRenderIndex() {
+  let wrapperCard = document.getElementById('card-Brands-Ul-Index');
+  for (let i = 0; i < 8; ++i) { 
+    wrapperCard.innerHTML += cardBrandsRender(cardBrands[i]);
+  }
+}
+
+function cardBrandsRender(arr) {
+ return (
+   `<li class="brand" style="background-image:url('http://127.0.0.1:8080/img/brands/${arr.img}')">
+   <a href="#"><h3 class="visually-hidden">${arr.name}</h3></a></li>`
+  )
+}
 
 
 
