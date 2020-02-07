@@ -1,6 +1,6 @@
-import {sliderArr} from './js_modules/sliderArr.js';
-import {cardGoods} from './js_modules/cardGoods.js';
-import {cardBrands} from './js_modules/cardBrands.js';
+import {sliderArr} from './sliderArr.js';
+import {cardGoods} from './cardGoods.js';
+import {cardBrands} from './cardBrands.js';
 
 window.onload = () => {
 
@@ -41,69 +41,66 @@ popUpMap.classList.add('visually-hidden');
 formWriteUs.classList.add('visually-hidden');
 idHeaderMiddleElementRightForm.style.display = "none";
 
-
 // Main index/catalog change //
 
-sliderOpenCatalogButton.addEventListener("click",renderCatalogSite);
+sliderOpenCatalogButton.addEventListener("click", renderCatalogSite);
 
 function renderIndexSite() {
-  technomartLinkUp.removeEventListener("click",renderIndexSite);
-  technomartLinkDown.removeEventListener("click",renderIndexSite);
+  technomartLinkUp.removeEventListener("click", renderIndexSite);
+  technomartLinkDown.removeEventListener("click", renderIndexSite);
   mainCatalog.hidden = true;
   mainIndex.hidden = false;
-  sliderOpenCatalogButton.addEventListener("click",renderCatalogSite);
+  sliderOpenCatalogButton.addEventListener("click", renderCatalogSite);
   document.getElementById('card-Goods-Ul-Catalog').innerHTML = "";
-  // for (let i = 0; i < 4; ++i) { debugger;
-  //   cardGoodsRender (cardGoods[i]);
-  // };
 }
 
 function renderCatalogSite() {
-  sliderButtonLeft.removeEventListener("click", iSubtraction);
-  sliderButtonRight.removeEventListener("click", iAddition);
-  sliderOpenCatalogButton.removeEventListener("click",renderCatalogSite);
+  sliderButtonLeft.removeEventListener("click", indexSubtraction);
+  sliderButtonRight.removeEventListener("click", indexAddition);
+  sliderOpenCatalogButton.removeEventListener("click", renderCatalogSite);
   mainIndex.hidden = true;
   mainCatalog.hidden = false;
-  technomartLinkUp.addEventListener("click",renderIndexSite);
-  technomartLinkDown.addEventListener("click",renderIndexSite);
+  technomartLinkUp.addEventListener("click", renderIndexSite);
+  technomartLinkDown.addEventListener("click", renderIndexSite);
   cardGoodsRenderCatalog();
 }
- 
+
 // main slider //
 
-if (mainIndex.hidden == false) { 
-  let timerId = setInterval(() => renderSlider(sliderArr,sliderArrLength), 4000)
+if (mainIndex.hidden === false) {
+  let timerId = setInterval(() => renderSlider(sliderArr, sliderArrLength), 4000)
 };
 
-
 function renderSlider(sliderArr) {
-  if (mainIndex.hidden) return 
-  if (sliderIndex === sliderArrLength) { 
+  if (mainIndex.hidden) return;
+  if (sliderIndex === sliderArrLength) {
     sliderIndex = 0;
-  }   
-  //console.info(sliderIndex);
-  //sliderMainImageUrl = 'url(./img/slider/' + sliderArr[i].img + ')';
+  }
   sliderMain.style.backgroundImage = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
   sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
   sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
-  ++sliderIndex; 
+  ++sliderIndex;
 };
 
-sliderButtonLeft.addEventListener("click", iSubtraction);
-sliderButtonRight.addEventListener("click", iAddition);
+sliderButtonLeft.addEventListener("click", indexSubtraction);
+sliderButtonRight.addEventListener("click", indexAddition);
 
-function iSubtraction(){
+function indexSubtraction() {
   --sliderIndex;
-  if (sliderIndex < 0) {sliderIndex = 0};
+  if (sliderIndex < 0) {
+    sliderIndex = 0
+  };
   sliderMainImageUrl = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
   sliderMain.style.backgroundImage = sliderMainImageUrl;
   sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
   sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
 }
 
-function iAddition(){
+function indexAddition() {
   ++sliderIndex;
-  if (sliderIndex >= sliderArrLength) {sliderIndex = sliderArrLength - 1};
+  if (sliderIndex >= sliderArrLength) {
+    sliderIndex = sliderArrLength - 1
+  };
   sliderMainImageUrl = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
   sliderMain.style.backgroundImage = sliderMainImageUrl;
   sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
@@ -118,12 +115,14 @@ buttonPopUpMapOpen.addEventListener("click", mapOpen);
 function mapOpen() {
   buttonPopUpMapOpen.removeEventListener("click", mapOpen);
   popUpMap.classList.remove('visually-hidden');
+  popUpMap.classList.add('fade-in-down');
   buttonPopUpBigMapClose.addEventListener("click", mapClose);
 }
 
 function mapClose() {
   buttonPopUpBigMapClose.removeEventListener("click", mapClose)
   popUpMap.classList.add('visually-hidden');
+  popUpMap.classList.remove('fade-in-down');
   buttonPopUpMapOpen.addEventListener("click", mapOpen);
 }
 
@@ -133,15 +132,17 @@ function mapClose() {
 buttonWriteUs.addEventListener("click", formWriteUsOpen);
 
 function formWriteUsOpen() {
-  buttonPopUpMapOpen.removeEventListener("click", formWriteUsOpen);
+  buttonWriteUs.removeEventListener("click", formWriteUsOpen);
   formWriteUs.classList.remove('visually-hidden');
+  formWriteUs.classList.add('fade-in-down');
   buttonPopUpWriteUsFormClose.addEventListener("click", formWriteUsClose);
 }
 
 function formWriteUsClose() {
   buttonPopUpWriteUsFormClose.removeEventListener("click", formWriteUsClose)
   formWriteUs.classList.add('visually-hidden');
-  buttonPopUpMapOpen.addEventListener("click", formWriteUsOpen);
+  formWriteUs.classList.remove('fade-in-down');
+  buttonWriteUs.addEventListener("click", formWriteUsOpen);
 }
 
 
@@ -167,31 +168,32 @@ function closeFormLogin() {
 
 cardGoodsRenderIndex();
 
-function cardGoodsRenderIndex() { 
+function cardGoodsRenderIndex() {
   let wrapperCard = document.getElementById('card-Goods-Ul-Index');
-  for (let i = 0; i < 4; ++i) { 
+  for (let i = 0; i < 4; ++i) {
     wrapperCard.innerHTML += cardRender(cardGoods[i])
   }
 }
 
 function cardGoodsRenderCatalog() {
   let wrapperCard = document.getElementById('card-Goods-Ul-Catalog');
-  for (let i = 0; i < 9; ++i) { 
+  for (let i = 0; i < 9; ++i) {
     wrapperCard.innerHTML += cardRender(cardGoods[i])
   }
 }
 
 function cardRender(arr) {
   return (
-    `<li class="card-item" id="'+ arr.id +'"
-    style="background-image:url('http://127.0.0.1:8080/img/goods/${arr.img}')">
-    <div class="wrapper-card-item-buttons"><button class="button-card-item-buy">купить</button>
-    <button class="button-card-item-addtobookmarks">в закладки</button></div>
-    <h3 class="cardGoodsName">${arr.name}</h3>
-    <h3 class="cardGoodsIdName">${arr.id}</h3>
-    <div class="old-price">${arr.oldPrice}</div>
-    <div class="new-price">${arr.price}</div>
-    <div class="new" style="display:${arr.display}"">new</div></li>`
+    `<li class="card-item" data-id="${arr.id}"
+      style="background-image:url('http://127.0.0.1:8080/img/goods/${arr.img}')">
+      <div class="wrapper-card-item-buttons"><button class="button-card-item-buy">купить</button>
+      <button class="button-card-item-addtobookmarks">в закладки</button></div>
+      <h3 class="card-goods-name">${arr.name}</h3>
+      <h3 class="card-goods-id-name">${arr.model}</h3>
+      <div class="old-price">${arr.oldPrice}</div>
+      <div class="new-price">${arr.price} грн.</div>
+      <div class="new" style="display:${arr.newDisplay}"">new</div>
+    </li>`
   )
 }
 
@@ -202,15 +204,16 @@ cardBrandsRenderIndex();
 
 function cardBrandsRenderIndex() {
   let wrapperCard = document.getElementById('card-Brands-Ul-Index');
-  for (let i = 0; i < 8; ++i) { 
+  for (let i = 0; i < 8; ++i) {
     wrapperCard.innerHTML += cardBrandsRender(cardBrands[i]);
   }
 }
 
 function cardBrandsRender(arr) {
- return (
-   `<li class="brand" style="background-image:url('http://127.0.0.1:8080/img/brands/${arr.img}')">
-   <a href="#"><h3 class="visually-hidden">${arr.name}</h3></a></li>`
+  return (
+    `<li class="brand" style="background-image:url('http://127.0.0.1:8080/img/brands/${arr.img}')">
+      <a href="#"><h3 class="visually-hidden">${arr.name}</h3></a>
+     </li>`
   )
 }
 
