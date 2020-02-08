@@ -477,7 +477,7 @@ main {
   padding-bottom: 38px;
 }
 
-.buttons-service button {
+.buttons-service-button {
   border: none;
   outline: none;
   font: bold 21px cuprum;
@@ -492,7 +492,22 @@ main {
   cursor: pointer;
 }
 
-.buttons-service button:hover {
+.buttons-service-focus{
+  border: none;
+  outline: none;
+  font: bold 21px cuprum;
+  color: @color-lightNavBar;
+  background-color: @color-mainBackground;
+  padding-left: 23px;
+  padding-right: 140px;
+  padding-top: 19px;
+  padding-bottom: 23px;
+  width: 100%;
+  box-shadow: inset -20px 0px 12px -20px #9c9c9c;
+  cursor: pointer;
+}
+
+.buttons-service-button:hover {
   color: @color-lightNavBar;
   background-color: @color-mainBackground;
 }
@@ -503,24 +518,44 @@ main {
   border-width: 1px 0 1px 0;
 }
 
+.wrapper-service-delivery {
+  display: contents;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .service-delivery {
-  flex-grow: 1;
   background-image: url('./img/background/background_delivery.jpg');
+  flex-grow: 1;
   padding-left: 80px;
   background-position-x: center;
 }
 
 .service-guarantee {
   background-image: url('./img/background/background_guarantee.jpg');
+  flex-grow: 1;
+  padding-left: 80px;
+  background-position-x: center;
 }
 
 .service-credit {
   background-image: url('./img/background/background_loan.jpg');
-}
-
-.service-guarantee,
-.service-credit {
-  .variable-visually-hidden;
+  flex-grow: 1;
+  padding-left: 80px;
+  background-position-x: center;
 }
 
 .company-contacts {

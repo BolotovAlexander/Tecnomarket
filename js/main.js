@@ -25,6 +25,11 @@ const buttonPopUpWriteUsFormClose = document.getElementById('button-pop-up-write
 const buttonLogin = document.querySelector('.button-login');
 const idHeaderMiddleElementRightForm = document.getElementById('id-header-middle-element-right-form');
 const idHeaderMiddleElementRight = document.getElementById('id-header-middle-element-right');
+const buttonsService = document.querySelector('.buttons-service');
+const buttonsServiceAllButtons = buttonsService.querySelectorAll('button');
+const wrapperServiceDelivery = document.querySelector('.wrapper-service-delivery');
+const wrapperServiceDeliveryAllDivs = wrapperServiceDelivery.querySelectorAll('div');
+
 
 
 let sliderMainImageUrl = 'url(./img/slider/' + sliderArr[0].img + ')';
@@ -39,6 +44,9 @@ mainCatalog.hidden = true;
 mainIndex.hidden = false;
 popUpMap.classList.add('visually-hidden');
 formWriteUs.classList.add('visually-hidden');
+document.querySelector('.service-guarantee').classList.add('visually-hidden');
+document.querySelector('.service-credit').classList.add('visually-hidden');
+
 idHeaderMiddleElementRightForm.style.display = "none";
 
 // Main index/catalog change //
@@ -204,8 +212,8 @@ cardBrandsRenderIndex();
 
 function cardBrandsRenderIndex() {
   let wrapperCard = document.getElementById('card-Brands-Ul-Index');
-  for (let i = 0; i < 8; ++i) {
-    wrapperCard.innerHTML += cardBrandsRender(cardBrands[i]);
+  for (let counterCardBrandsRenderIndex = 0; counterCardBrandsRenderIndex < 8; ++counterCardBrandsRenderIndex) {
+    wrapperCard.innerHTML += cardBrandsRender(cardBrands[counterCardBrandsRenderIndex]);
   }
 }
 
@@ -218,5 +226,53 @@ function cardBrandsRender(arr) {
 }
 
 
+// Rendering services, down at Main //
+
+buttonsService.addEventListener("click", renderServiceDown);
+
+function renderServiceDown (ev) {debugger;
+
+  let evTargetClass = ev.target.dataset.label;   // получаем необходимое имя класса оно же дата-метка
+  document.querySelector(`.${evTargetClass}`).classList.remove('visually-hidden');
+  document.querySelector(`.${evTargetClass}`).classList.add('fade-in');
+
+  for (let indexRenderServiceDown = 0; indexRenderServiceDown < 3; indexRenderServiceDown++) {
+    if (wrapperServiceDeliveryAllDivs[j].classList.contains(evTargetClass)) {
+      buttonsServiceAllButtons[indexRenderServiceDown].classList.remove('buttons-service-button');
+      buttonsServiceAllButtons[indexRenderServiceDown].classList.add('buttons-service-focus');
+      continue
+    };
+    buttonsServiceAllButtons[indexRenderServiceDown].classList.remove('buttons-service-focus');
+    buttonsServiceAllButtons[indexRenderServiceDown].classList.add('buttons-service-button');
+    wrapperServiceDeliveryAllDivs[indexRenderServiceDown].classList.add('visually-hidden');
+    wrapperServiceDeliveryAllDivs[indexRenderServiceDown].classList.remove('fade-in');
+  }
+}
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+черновик
+/*
+ * Прослушивать событие transitionend на определенном элементе, т.е. #slidingMenu
+ * Затем, вызвать определенную функцию, т.е. showMessage()
+ 
+function showMessage() {
+    alert('Transition закончил свое выполнение');
+}
+
+var element = document.getElementById("slidingMenu");
+element.addEventListener("transitionend", showMessage, false);*/
