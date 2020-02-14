@@ -1,10 +1,10 @@
-import {sliderArr} from './sliderArr.js';
-import {cardGoods} from './cardGoods.js';
-import {cardBrands} from './cardBrands.js';
+import {SLIDER_ARR} from './sliderArr.js';
+import {CARD_GOODS} from './cardGoods.js';
+import {CARD_BRANDS} from './cardBrands.js';
 
 window.onload = () => {
 
-const sliderArrLength = sliderArr.length;
+const sliderArrLength = SLIDER_ARR.length;
 const mainIndex = document.getElementById('main-index');
 const mainCatalog = document.getElementById('main-catalog');
 const technomartLinkUp = document.getElementById('technomart-link-up');
@@ -32,10 +32,10 @@ const wrapperServiceDeliveryAllDivs = wrapperServiceDelivery.querySelectorAll('d
 
 
 
-let sliderMainImageUrl = 'url(./img/slider/' + sliderArr[0].img + ')';
+let sliderMainImageUrl = 'url(./img/slider/' + SLIDER_ARR[0].img + ')';
 sliderMain.style.backgroundImage = sliderMainImageUrl;
-sliderMainTextDivSpan.innerText = sliderArr[0].heading;
-sliderMainTextDivText.innerText = sliderArr[0].text;
+sliderMainTextDivSpan.innerText = SLIDER_ARR[0].heading;
+sliderMainTextDivText.innerText = SLIDER_ARR[0].text;
 
 let sliderIndex = 0;
 
@@ -76,17 +76,17 @@ function renderCatalogSite() {
 // main slider //
 
 if (mainIndex.hidden === false) {
-  let timerId = setInterval(() => renderSlider(sliderArr, sliderArrLength), 4000)
+  let timerId = setInterval(() => renderSlider(SLIDER_ARR, sliderArrLength), 4000)
 };
 
-function renderSlider(sliderArr) {
+function renderSlider(SLIDER_ARR) {
   if (mainIndex.hidden) return;
   if (sliderIndex === sliderArrLength) {
     sliderIndex = 0;
   }
-  sliderMain.style.backgroundImage = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
-  sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
-  sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
+  sliderMain.style.backgroundImage = 'url(./img/slider/' + SLIDER_ARR[sliderIndex].img + ')';
+  sliderMainTextDivSpan.innerText = SLIDER_ARR[sliderIndex].heading;
+  sliderMainTextDivText.innerText = SLIDER_ARR[sliderIndex].text;
   ++sliderIndex;
 };
 
@@ -98,10 +98,10 @@ function indexSubtraction() {
   if (sliderIndex < 0) {
     sliderIndex = 0
   };
-  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
+  sliderMainImageUrl = 'url(./img/slider/' + SLIDER_ARR[sliderIndex].img + ')';
   sliderMain.style.backgroundImage = sliderMainImageUrl;
-  sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
-  sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
+  sliderMainTextDivSpan.innerText = SLIDER_ARR[sliderIndex].heading;
+  sliderMainTextDivText.innerText = SLIDER_ARR[sliderIndex].text;
 }
 
 function indexAddition() {
@@ -109,10 +109,10 @@ function indexAddition() {
   if (sliderIndex >= sliderArrLength) {
     sliderIndex = sliderArrLength - 1
   };
-  sliderMainImageUrl = 'url(./img/slider/' + sliderArr[sliderIndex].img + ')';
+  sliderMainImageUrl = 'url(./img/slider/' + SLIDER_ARR[sliderIndex].img + ')';
   sliderMain.style.backgroundImage = sliderMainImageUrl;
-  sliderMainTextDivSpan.innerText = sliderArr[sliderIndex].heading;
-  sliderMainTextDivText.innerText = sliderArr[sliderIndex].text;
+  sliderMainTextDivSpan.innerText = SLIDER_ARR[sliderIndex].heading;
+  sliderMainTextDivText.innerText = SLIDER_ARR[sliderIndex].text;
 }
 
 
@@ -179,14 +179,14 @@ cardGoodsRenderIndex();
 function cardGoodsRenderIndex() {
   let wrapperCard = document.getElementById('card-Goods-Ul-Index');
   for (let i = 0; i < 4; ++i) {
-    wrapperCard.innerHTML += cardRender(cardGoods[i])
+    wrapperCard.innerHTML += cardRender(CARD_GOODS[i])
   }
 }
 
 function cardGoodsRenderCatalog() {
   let wrapperCard = document.getElementById('card-Goods-Ul-Catalog');
   for (let i = 0; i < 9; ++i) {
-    wrapperCard.innerHTML += cardRender(cardGoods[i])
+    wrapperCard.innerHTML += cardRender(CARD_GOODS[i])
   }
 }
 
@@ -212,8 +212,8 @@ cardBrandsRenderIndex();
 
 function cardBrandsRenderIndex() {
   let wrapperCard = document.getElementById('card-Brands-Ul-Index');
-  for (let counterCardBrandsRenderIndex = 0; counterCardBrandsRenderIndex < 8; ++counterCardBrandsRenderIndex) {
-    wrapperCard.innerHTML += cardBrandsRender(cardBrands[counterCardBrandsRenderIndex]);
+  for (let countercardBrandsRenderIndex = 0; countercardBrandsRenderIndex < 8; ++countercardBrandsRenderIndex) {
+    wrapperCard.innerHTML += cardBrandsRender(CARD_BRANDS[countercardBrandsRenderIndex]);
   }
 }
 
@@ -230,14 +230,14 @@ function cardBrandsRender(arr) {
 
 buttonsService.addEventListener("click", renderServiceDown);
 
-function renderServiceDown (ev) {debugger;
+function renderServiceDown (ev) {
 
   let evTargetClass = ev.target.dataset.label;   // получаем необходимое имя класса оно же дата-метка
   document.querySelector(`.${evTargetClass}`).classList.remove('visually-hidden');
   document.querySelector(`.${evTargetClass}`).classList.add('fade-in');
 
   for (let indexRenderServiceDown = 0; indexRenderServiceDown < 3; indexRenderServiceDown++) {
-    if (wrapperServiceDeliveryAllDivs[j].classList.contains(evTargetClass)) {
+    if (wrapperServiceDeliveryAllDivs[indexRenderServiceDown].classList.contains(evTargetClass)) {
       buttonsServiceAllButtons[indexRenderServiceDown].classList.remove('buttons-service-button');
       buttonsServiceAllButtons[indexRenderServiceDown].classList.add('buttons-service-focus');
       continue

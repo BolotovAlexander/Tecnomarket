@@ -1,4 +1,4 @@
-export const cardGoods = [
+export const CARD_GOODS = [
   {
     name: "Перфоратор BOSCH",
     id: "bfg_9000",

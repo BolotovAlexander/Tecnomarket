@@ -1,4 +1,4 @@
-export const sliderArr = [
+export const SLIDER_ARR = [
   {
     name: "perforator",
     img: "slider_perforator.jpg",

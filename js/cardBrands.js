@@ -1,4 +1,4 @@
-export const cardBrands = [
+export const CARD_BRANDS = [
   {
     name: "bosch",
     img: "brands_Bosch.png",
