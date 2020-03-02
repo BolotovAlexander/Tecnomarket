@@ -79,7 +79,7 @@ if (mainIndex.hidden === false) {
   let timerId = setInterval(() => renderSlider(SLIDER_ARR, sliderArrLength), 4000)
 };
 
-function renderSlider(SLIDER_ARR) {
+function renderSlider(SLIDER_ARR) { console.info ('1');
   if (mainIndex.hidden) return;
   if (sliderIndex === sliderArrLength) {
     sliderIndex = 0;
