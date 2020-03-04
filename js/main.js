@@ -192,8 +192,8 @@ function cardGoodsRenderCatalog() {
 
 function cardRender(arr) {
   return (
-    `<li class="card-item" data-id="${arr.id}"
-      style="background-image:url('http://127.0.0.1:8080/img/goods/${arr.img}')">
+    `<li class="card-item" data-id="${arr.id}">
+      <img src='http://127.0.0.1:8080/img/goods/${arr.img}' alt="Drill">
       <div class="wrapper-card-item-buttons"><button class="button-card-item-buy">купить</button>
       <button class="button-card-item-addtobookmarks">в закладки</button></div>
       <h3 class="card-goods-name">${arr.name}</h3>
@@ -248,6 +248,7 @@ function renderServiceDown (ev) {
     wrapperServiceDeliveryAllDivs[indexRenderServiceDown].classList.remove('fade-in');
   }
 }
+
 
 
 
